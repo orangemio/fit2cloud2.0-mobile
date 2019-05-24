@@ -7,7 +7,9 @@
     <group title="cell demo">
       <cell title="VUX" value="cool" is-link></cell>
     </group>
-  </div>
+		<h1>{{ 'My nice title' | translate }}</h1>
+		<p>{{ $t('content', {'type': 'nice'}) }}</p>
+	</div>
 </template>
 
 <script>
