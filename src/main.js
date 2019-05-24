@@ -15,6 +15,7 @@ const store = new Vuex.Store()
 Vue.use(AjaxPlugin)
 Vue.use(vuexI18n.plugin, store, {
   moduleName: 'i18n',
+  // 找不到翻译文件回调
   onTranslationNotFound (locale, key) {
     console.warn(`i18n :: Key '${key}' not found for locale '${locale}'`)
   }}
