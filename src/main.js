@@ -3,40 +3,23 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import FastClick from 'fastclick'
-import VueRouter from 'vue-router'
 import App from './App'
-import Home from './components/HelloFromVux'
+import router from './router' // 引入自定义路由
 import { AjaxPlugin } from 'vux' // load AjaxPlugin module
 import vuexI18n from 'vuex-i18n' // load vuex i18n module
+import translationsEn from './i18n/translationsEn'
+import translationsCn from './i18n/translationsCn'
 
 Vue.use(Vuex)
 const store = new Vuex.Store()
 Vue.use(AjaxPlugin)
-Vue.use(VueRouter)
 Vue.use(vuexI18n.plugin, store)
-
-const translationsEn = {
-  'content': 'This is some {type} content'
-}
-const translationsDe = {
-  'My nice title': 'Ein schöner Titel',
-  'content': 'Dies ist ein toller Inhalt'
-}
 
 // add translations directly to the application
 Vue.i18n.add('en', translationsEn)
-Vue.i18n.add('de', translationsDe)
+Vue.i18n.add('de', translationsCn)
 // set the start locale to use
 Vue.i18n.set('en')
-
-const routes = [{
-  path: '/',
-  component: Home
-}]
-
-const router = new VueRouter({
-  routes
-})
 
 FastClick.attach(document.body)
 
