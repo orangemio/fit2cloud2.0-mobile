@@ -17,7 +17,7 @@ Vue.use(vuexI18n.plugin, store)
 
 // add translations directly to the application
 Vue.i18n.add('en', translationsEn)
-Vue.i18n.add('de', translationsCn)
+Vue.i18n.add('cn', translationsCn)
 // set the start locale to use
 Vue.i18n.set('en')
 
