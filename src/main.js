@@ -13,7 +13,12 @@ import translationsCn from './i18n/translationsCn'
 Vue.use(Vuex)
 const store = new Vuex.Store()
 Vue.use(AjaxPlugin)
-Vue.use(vuexI18n.plugin, store)
+Vue.use(vuexI18n.plugin, store, {
+  moduleName: 'i18n',
+  onTranslationNotFound (locale, key) {
+    console.warn(`i18n :: Key '${key}' not found for locale '${locale}'`)
+  }}
+)
 
 // add translations directly to the application
 Vue.i18n.add('en', translationsEn)
