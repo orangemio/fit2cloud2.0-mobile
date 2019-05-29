@@ -1,0 +1,36 @@
+en:
+  Prevent auto closing: Prevent auto closing
+  Close me: Close me
+  Deleted~: Deleted~
+  'Slot: header': 'Slot: header'
+  Basic Usage: Basic Usage
+  Android Theme: Android Theme
+  Show cancel menu: Show cancel menu
+  Menu as tips: Menu as tips
+  Prevent closing when clicking mask: Prevent closing when clicking mask
+  Share to friends: Share to friends
+  Share to timeline: Share to timeline
+  Take Photo: Take Photo
+  Choose from photos: Choose from photos
+  Actionsheet header: >-
+    Are you sure?<br/><span style="color:#666;font-size:12px;">Once deleted, you
+    will never find it.</span>
+  '<span style="color:red">Delete</span>': '<span style="color:red">Delete</span>'
+  Array menu: Array menu
+zh-CN:
+  Prevent auto closing: 不自动关闭
+  Close me: 点我关闭
+  Deleted~: 删除成功
+  'Slot: header': 使用 header slot
+  Basic Usage: 基本使用
+  Android Theme: 安卓风格
+  Show cancel menu: 显示取消菜单
+  Menu as tips: 显示提示文字
+  Prevent closing when clicking mask: 点击遮罩区域不自动关闭
+  Share to friends: 分享给朋友
+  Share to timeline: 分享到朋友圈
+  Take Photo: 拍照
+  Choose from photos: 从相册选择
+  Actionsheet header: '确定咩?<br/><span style="color:#666;font-size:12px;">删除后就无法撤消了哦</span>'
+  '<span style="color:red">Delete</span>': '<span style="color:red">删除</span>'
+  Array menu: 使用数组定义菜单

@@ -1,3 +1,4 @@
+import objectAssign from 'object-assign'
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
@@ -5,27 +6,40 @@ import Vuex from 'vuex'
 import FastClick from 'fastclick'
 import App from './App'
 import router from './router' // 引入自定义路由
-import { AjaxPlugin } from 'vux' // load AjaxPlugin module
+import { AjaxPlugin, LocalePlugin } from 'vux' // load AjaxPlugin module
 import vuexI18n from 'vuex-i18n' // load vuex i18n module
-import translationsEn from './i18n/translationsEn'
-import translationsCn from './i18n/translationsCn'
+import vuxLocales from './locales/all.yml'
+import componentsLocales from './locales/components.yml'
+
+// require('es6-promise').polyfill()
 
 Vue.use(Vuex)
 const store = new Vuex.Store()
 Vue.use(AjaxPlugin)
+Vue.use(LocalePlugin)
 Vue.use(vuexI18n.plugin, store, {
-  moduleName: 'i18n',
+  moduleName: 'i18n'
   // 找不到翻译文件回调
-  onTranslationNotFound (locale, key) {
-    console.warn(`i18n :: Key '${key}' not found for locale '${locale}'`)
-  }}
+  // onTranslationNotFound (locale, key) {
+  //   console.warn(`i18n :: Key '${key}' not found for locale '${locale}'`)
+  // }
+}
 )
+const finalLocales = {
+  'en': objectAssign(vuxLocales['en'], componentsLocales['en']),
+  'zh-CN': objectAssign(vuxLocales['zh-CN'], componentsLocales['zh-CN'])
+}
 
-// add translations directly to the application
-Vue.i18n.add('en', translationsEn)
-Vue.i18n.add('cn', translationsCn)
-// set the start locale to use
-Vue.i18n.set('en')
+for (let i in finalLocales) {
+  Vue.i18n.add(i, finalLocales[i])
+}
+
+const nowLocale = Vue.locale.get()
+if (/zh/.test(nowLocale)) {
+  Vue.i18n.set('zh-CN')
+} else {
+  Vue.i18n.set('en')
+}
 
 FastClick.attach(document.body)
 

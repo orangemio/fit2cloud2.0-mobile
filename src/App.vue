@@ -3,7 +3,7 @@
     <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">ACloud</x-header>
     <router-view></router-view>
     <div v-transfer-dom>
-      <actionsheet :menus="menus" v-model="showMenus" show-cancel></actionsheet>
+      <actionsheet :menus="menus" v-model="showMenus" @on-click-menu="changeLocale" show-cancel></actionsheet>
     </div>
   </div>
 </template>
@@ -22,11 +22,17 @@ export default {
     ButtonTab,
     ButtonTabItem
   },
+  methods: {
+    changeLocale (locale) {
+      this.$i18n.set(locale)
+      this.$locale.set(locale)
+    }
+  },
   data () {
     return {
       menus: {
-        menu1: '中文',
-        menu2: 'English'
+        'zh-CN': '中文',
+        'en': 'English'
       },
       showMenus: false
     }

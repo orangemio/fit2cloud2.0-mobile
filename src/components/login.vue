@@ -54,6 +54,8 @@
   </div>
 </template>
 
+
+//自动编译读取
 <i18n>
 Prevent auto closing:
   zh-CN: 不自动关闭
