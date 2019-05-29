@@ -5,18 +5,36 @@
     <div v-transfer-dom>
       <actionsheet :menus="menus" v-model="showMenus" @on-click-menu="changeLocale"></actionsheet>
     </div>
+        <tabbar>
+      <tabbar-item selected link="/component/demo">
+        <img slot="icon" src="./assets/demo/icon_nav_article.png">
+        <span slot="label">{{ $t('index') }}</span>
+      </tabbar-item>
+      <tabbar-item link="/login">
+        <img slot="icon" src="./assets/demo/icon_nav_cell.png">
+        <span slot="label">{{ $t('Demo') }}</span>
+      </tabbar-item>
+    </tabbar>
   </div>
 </template>
 
+<i18n>
+index:
+  zh-CN: 首页
+Demo:
+  zh-CN: 演示页
+</i18n>
 
 <script>
-import { XHeader, Actionsheet, TransferDom, ButtonTab, ButtonTabItem } from 'vux'
+import { Tabbar, TabbarItem, XHeader, Actionsheet, TransferDom, ButtonTab, ButtonTabItem } from 'vux'
 
 export default {
   directives: {
     TransferDom
   },
   components: {
+    Tabbar,
+    TabbarItem,
     XHeader,
     Actionsheet,
     ButtonTab,

@@ -17,6 +17,8 @@ en:
     will never find it.</span>
   '<span style="color:red">Delete</span>': '<span style="color:red">Delete</span>'
   Array menu: Array menu
+  index: index
+  Demo: Demo
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -34,3 +36,5 @@ zh-CN:
   Actionsheet header: '确定咩?<br/><span style="color:#666;font-size:12px;">删除后就无法撤消了哦</span>'
   '<span style="color:red">Delete</span>': '<span style="color:red">删除</span>'
   Array menu: 使用数组定义菜单
+  index: 首页
+  Demo: 演示页
