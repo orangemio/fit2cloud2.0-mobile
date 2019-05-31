@@ -21,7 +21,6 @@
     </tabbar>
   </div>
 </template>
-
 <i18n>
 index:
   zh-CN: 首页

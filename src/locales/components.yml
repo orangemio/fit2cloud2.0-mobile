@@ -19,6 +19,7 @@ en:
   Array menu: Array menu
   index: index
   Demo: Demo
+  me: me
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -38,3 +39,4 @@ zh-CN:
   Array menu: 使用数组定义菜单
   index: 首页
   Demo: 演示页
+  me: 我
