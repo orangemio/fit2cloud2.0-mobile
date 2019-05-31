@@ -14,6 +14,10 @@
         <img slot="icon" src="./assets/demo/icon_nav_cell.png">
         <span slot="label">{{ $t('Demo') }}</span>
       </tabbar-item>
+      <tabbar-item link="/me">
+        <img slot="icon" src="./assets/demo/icon_nav_me.png">
+        <span slot="label">{{ $t('me') }}</span>
+      </tabbar-item>
     </tabbar>
   </div>
 </template>
@@ -23,6 +27,20 @@ index:
   zh-CN: 首页
 Demo:
   zh-CN: 演示页
+me:
+  zh-CN: 我
+</i18n>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>
+
 </i18n>
 
 <script>
