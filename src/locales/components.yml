@@ -23,6 +23,10 @@ en:
   tagOne: tagOne
   tagTwo: tagTwo
   tagThree: tagThree
+  About: About
+  About me: About me
+  Instance List: Instance List
+  Overview Of Resource: Overview Of Resource
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -46,3 +50,7 @@ zh-CN:
   tagOne: 待办事项
   tagTwo: 服务目录
   tagThree: 申请资源
+  About: 关于
+  About me: 关于
+  Instance List: 实例列表
+  Overview Of Resource: 总览
