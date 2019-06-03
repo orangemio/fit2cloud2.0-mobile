@@ -27,6 +27,9 @@ en:
   About me: About me
   Instance List: Instance List
   Overview Of Resource: Overview Of Resource
+  Apply: Apply
+  Tasks: Tasks
+  Services: Services
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -54,3 +57,6 @@ zh-CN:
   About me: 关于
   Instance List: 实例列表
   Overview Of Resource: 总览
+  Apply: 申请资源
+  Tasks: 待办事项
+  Services: 服务目录

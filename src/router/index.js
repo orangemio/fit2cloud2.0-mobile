@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // 引用自定义组件
 import Home from '@/components/HelloFromVux'
-import tagOne from '@/components/tagOne'
-import tagThree from '@/components/tagThree'
-import tagTwo from '@/components/tagTwo'
+import Tasks from '@/components/Tasks'
+import Services from '@/components/Services'
+import Apply from '@/components/Apply'
 import me from '@/components/me'
 Vue.use(Router)
 
@@ -16,19 +16,19 @@ export default new Router({
       component: Home
     },
     {
-      path: '/tagOne',
-      name: 'tagOne',
-      component: tagOne
+      path: '/Tasks',
+      name: 'Tasks',
+      component: Tasks
     },
     {
-      path: '/tagTwo',
-      name: 'tagTwo',
-      component: tagTwo
+      path: '/Services',
+      name: 'Services',
+      component: Services
     },
     {
-      path: '/tagThree',
-      name: 'tagThree',
-      component: tagThree
+      path: '/Apply',
+      name: 'Apply',
+      component: Apply
     },
     {
       path: '/me',

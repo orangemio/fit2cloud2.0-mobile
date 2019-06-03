@@ -6,31 +6,31 @@
       <actionsheet :menus="menus" v-model="showMenus" @on-click-menu="changeLocale"></actionsheet>
     </div>
         <tabbar>
-      <tabbar-item selected link="/tagOne">
-        <img slot="icon" src="./assets/demo/icon_nav_article.png">
-        <span slot="label">{{ $t('tagOne') }}</span>
+      <tabbar-item selected link="/Tasks">
+        <img slot="icon" src="./assets/images/icon_nav_article.png">
+        <span slot="label">{{ $t('Tasks') }}</span>
       </tabbar-item>
-      <tabbar-item link="/tagTwo">
-        <img slot="icon" src="./assets/demo/icon_nav_cell.png">
-        <span slot="label">{{ $t('tagTwo') }}</span>
+      <tabbar-item link="/Services">
+        <img slot="icon" src="./assets/images/icon_nav_cell.png">
+        <span slot="label">{{ $t('Services') }}</span>
       </tabbar-item>
-      <tabbar-item link="/tagThree">
-        <img slot="icon" src="./assets/demo/icon_nav_cell.png">
-        <span slot="label">{{ $t('tagThree') }}</span>
+      <tabbar-item link="/Apply">
+        <img slot="icon" src="./assets/images/icon_nav_msg.png">
+        <span slot="label">{{ $t('Apply') }}</span>
       </tabbar-item>
       <tabbar-item link="/me">
-        <img slot="icon" src="./assets/demo/icon_nav_me.png">
+        <img slot="icon" src="./assets/images/icon_nav_me.png">
         <span slot="label">{{ $t('me') }}</span>
       </tabbar-item>
     </tabbar>
   </div>
 </template>
 <i18n>
-tagOne:
+Tasks:
   zh-CN: 待办事项
-tagTwo:
+Services:
   zh-CN: 服务目录
-tagThree:
+Apply:
   zh-CN: 申请资源
 me:
   zh-CN: 我
