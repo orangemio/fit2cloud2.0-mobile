@@ -1,7 +1,7 @@
 <template>
   <div>
     <group>
-      <cell is-link :title="$t('About me')" link="/component/tabbar-simple"></cell>
+     <cell icon="./assets/demo/user.svg" is-link :title="$t('About me')" link="http://www.baidu.com"></cell>
     </group>   
     <group>
       <cell is-link :title="$t('Instance List')" link="/component/tabbar-simple"></cell>
@@ -18,7 +18,9 @@ export default {
     Tabbar,
     TabbarItem,
     Group,
-    Cell
+    Cell,
+    icon,
+    box
   }
 }
 </script>
@@ -27,9 +29,9 @@ export default {
 About me:
   zh-CN: 关于
 Instance List:
-  zh-CN: 实例列表
+  zh-CN: 虚拟机列表
 Overview Of Resource:
-  zh-CN: 总览
+  zh-CN: 资源概况
 About:
   zh-CN: 关于
 </i18n>
