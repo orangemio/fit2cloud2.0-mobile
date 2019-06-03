@@ -18,9 +18,7 @@ export default {
     Tabbar,
     TabbarItem,
     Group,
-    Cell,
-    icon,
-    box
+    Cell
   }
 }
 </script>
