@@ -20,6 +20,9 @@ en:
   index: index
   Demo: Demo
   me: me
+  tagOne: tagOne
+  tagTwo: tagTwo
+  tagThree: tagThree
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -40,3 +43,6 @@ zh-CN:
   index: 首页
   Demo: 演示页
   me: 我
+  tagOne: 待办事项
+  tagTwo: 服务目录
+  tagThree: 申请资源

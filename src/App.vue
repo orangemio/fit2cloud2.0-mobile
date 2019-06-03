@@ -6,13 +6,17 @@
       <actionsheet :menus="menus" v-model="showMenus" @on-click-menu="changeLocale"></actionsheet>
     </div>
         <tabbar>
-      <tabbar-item selected link="/component/demo">
+      <tabbar-item selected link="/tagOne">
         <img slot="icon" src="./assets/demo/icon_nav_article.png">
-        <span slot="label">{{ $t('index') }}</span>
+        <span slot="label">{{ $t('tagOne') }}</span>
       </tabbar-item>
-      <tabbar-item link="/login">
+      <tabbar-item link="/tagTwo">
         <img slot="icon" src="./assets/demo/icon_nav_cell.png">
-        <span slot="label">{{ $t('Demo') }}</span>
+        <span slot="label">{{ $t('tagTwo') }}</span>
+      </tabbar-item>
+      <tabbar-item link="/tagThree">
+        <img slot="icon" src="./assets/demo/icon_nav_cell.png">
+        <span slot="label">{{ $t('tagThree') }}</span>
       </tabbar-item>
       <tabbar-item link="/me">
         <img slot="icon" src="./assets/demo/icon_nav_me.png">
@@ -22,10 +26,12 @@
   </div>
 </template>
 <i18n>
-index:
-  zh-CN: 首页
-Demo:
-  zh-CN: 演示页
+tagOne:
+  zh-CN: 待办事项
+tagTwo:
+  zh-CN: 服务目录
+tagThree:
+  zh-CN: 申请资源
 me:
   zh-CN: 我
 </i18n>
