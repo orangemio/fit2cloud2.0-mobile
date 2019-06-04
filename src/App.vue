@@ -37,18 +37,6 @@ me:
 </i18n>
 
 <script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
-
-</i18n>
-
-<script>
 import { Tabbar, TabbarItem, XHeader, Actionsheet, TransferDom, ButtonTab, ButtonTabItem } from 'vux'
 
 export default {
