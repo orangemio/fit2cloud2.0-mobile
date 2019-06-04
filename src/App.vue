@@ -85,6 +85,25 @@ export default {
 
 <style lang="less">
 @import '~vux/src/styles/reset.less';
+@font-face {
+  font-family: 'vux-demo';  /* project id 70323 */
+  src: url('//at.alicdn.com/t/font_70323_wlronpvr565yiudi.eot');
+  src: url('//at.alicdn.com/t/font_70323_wlronpvr565yiudi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_70323_wlronpvr565yiudi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_70323_wlronpvr565yiudi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_70323_wlronpvr565yiudi.svg#iconfont') format('svg');
+}
+.demo-icon {
+  font-family: 'vux-demo';
+  font-size: 20px;
+  color: #04BE02;
+}
+.demo-icon-big {
+  font-size: 28px;
+}
+.demo-icon:before {
+  content: attr(icon);
+}
 
 body {
   background-color: #fbf9fe;
