@@ -84,7 +84,7 @@ export default {
 }
 .demo-icon {
   font-family: 'vux-bba';
-  font-size: 20px;
+  font-size: 18px;
   color: #333333;;
 }
 .demo-icon-big {

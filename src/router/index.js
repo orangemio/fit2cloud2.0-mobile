@@ -6,6 +6,8 @@ import Tasks from '@/components/Tasks'
 import Services from '@/components/Services'
 import Apply from '@/components/Apply'
 import me from '@/components/me'
+import about from '@/components/about'
+
 Vue.use(Router)
 
 export default new Router({
@@ -34,6 +36,11 @@ export default new Router({
       path: '/me',
       name: 'me',
       component: me
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: about
     }
   ]
 })

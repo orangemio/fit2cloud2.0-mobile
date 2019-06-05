@@ -14,7 +14,7 @@
        </div>
     </group>   
     <group>
-      <cell is-link :title="$t('Instance List')" link="/component/tabbar-simple">
+      <cell is-link :title="$t('Instance List')" link="/component/tabbar-simple" >
         <span class="demo-icon" slot="icon">&#xe6f2;</span>
       </cell>
       <cell is-link :title="$t('Overview Of Resource')"  link="/component/tabbar-icon">
@@ -96,6 +96,7 @@ Your Email:
 }
 .pull-img {
     margin-left: 15px;
+    margin-top: 8px
 }
 .pull-left {
   float: left;
