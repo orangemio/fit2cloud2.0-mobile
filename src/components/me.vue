@@ -4,7 +4,6 @@
        <!-- <div class="widget-content mine-top-view text-left cardStyle-rewrite ">          -->
       <div class="widget-content  text-left cardStyle-rewrite ">         
       <img src="src/assets/demo/user.svg" class="pull-left pull-img" width="60" height="60">
-
         <div class="pull-left pull-div" ng-style="{'line-height':currentGroup.name ? '20px' : '26px','padding-top':currentGroup.name ? '2px' : '4px',}">
             <span ng-bind="user.name" class="pull-left" style="clear: right;"></span><br>
             <span ng-if="currentGroup.name" ng-bind="currentGroup.name" class="pull-left"></span><br ng-if="currentGroup.name">
@@ -101,6 +100,13 @@ About:
 }
 .fa-desktop:before {
   content: "\f108";
+}
+.clearfix:after {
+	  content:""; 
+	  height:0; 
+	  visibility:hidden; 
+	  display:block; 
+	  clear:both; 
 }
 </style>
 
