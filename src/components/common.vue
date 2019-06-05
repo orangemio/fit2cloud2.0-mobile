@@ -6,7 +6,7 @@
     const SecretKey = 'u82P9DsxIwxOG8ZC'
     // const loginUrl = 'http://103.235.232.207/'
     function gethashkey () {
-      console.log(CryptoJS.enc.Utf8.parse(SecretKey))
+      return CryptoJS.enc.Utf8.parse(SecretKey)
     }
     // 暴露出这些属性和方法
     export default {
