@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     showkey () {
-      console.log(this.COMMON.gethashkey())
+      console.log(this.COMMON.gethashkey('u82P9DsxIwxOG8ZC', '7fGeaovhswFRcWfc'))
     }
   }
 }
