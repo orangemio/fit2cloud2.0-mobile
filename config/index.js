@@ -10,7 +10,14 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/':{  
+        target:'http://103.235.232.207/'//设置调用的接口域名和端口号 ( 设置代理目标)
+      },
+      '/*':{
+       target:'http://103.235.232.207/'
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
