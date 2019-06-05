@@ -30,6 +30,14 @@ en:
   Apply: Apply
   Tasks: Tasks
   Services: Services
+  Tiexi: Tiexi
+  Dadong: Dadong
+  Beijing: Beijing
+  Azure: Azure
+  Lab: Lab
+  Aws: Aws
+  platform: platform
+  apply: apply
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -60,3 +68,11 @@ zh-CN:
   Tasks: 待办事项
   Services: 服务目录
   Apply: 申请资源
+  Tiexi: 铁西
+  Dadong: 大东
+  Beijing: 北京
+  Azure: Azure
+  Lab: Lab
+  Aws: Aws
+  platform: 平台
+  apply: 申请
