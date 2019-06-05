@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">ACloud</x-header>
+    <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">Acloud</x-header>
     <router-view></router-view>
     <div v-transfer-dom>
       <actionsheet :menus="menus" v-model="showMenus" @on-click-menu="changeLocale"></actionsheet>
@@ -34,18 +34,6 @@ Apply:
   zh-CN: 申请资源
 me:
   zh-CN: 我
-</i18n>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
-
 </i18n>
 
 <script>
