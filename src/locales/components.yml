@@ -38,6 +38,9 @@ en:
   Aws: Aws
   platform: platform
   apply: apply
+  Your Name: Your Name
+  Your Group: Your Group
+  Your Email: Your Email
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -76,3 +79,6 @@ zh-CN:
   Aws: Aws
   platform: 平台
   apply: 申请
+  Your Name: 你的名字
+  Your Group: 你的组织
+  Your Email: 你的邮箱

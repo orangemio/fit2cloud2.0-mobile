@@ -73,9 +73,30 @@ export default {
 
 <style lang="less">
 @import '~vux/src/styles/reset.less';
+@font-face {
+  font-family: 'vux-bba';  /* project id 1230044 */
+  src: url('//at.alicdn.com/t/font_1230044_jtu2kndnjn9.eot');
+  src: url('//at.alicdn.com/t/font_1230044_jtu2kndnjn9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1230044_jtu2kndnjn9.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1230044_jtu2kndnjn9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1230044_jtu2kndnjn9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1230044_jtu2kndnjn9.svg#iconfont') format('svg');
+}
+.demo-icon {
+  font-family: 'vux-bba';
+  font-size: 18px;
+  color: #333333;;
+}
+.demo-icon-big {
+  font-size: 28px;
+}
+.demo-icon:before {
+  content: attr(icon);
+}
 
 body {
   background-color: #fbf9fe;
+  font-family :'BMW Group Condensed'
 }
 .menu-title {
   color: #888;
