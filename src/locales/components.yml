@@ -50,6 +50,9 @@ en:
   点击事件: Click Event
   跳转到首页: Homepage
   申请虚拟机: Application for Virtual Machine
+  Your Name: Your Name
+  Your Group: Your Group
+  Your Email: Your Email
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -100,3 +103,6 @@ zh-CN:
   点击事件: 点击事件
   跳转到首页: 跳转到首页
   申请虚拟机: 申请虚拟机
+  Your Name: 你的名字
+  Your Group: 你的组织
+  Your Email: 你的邮箱
