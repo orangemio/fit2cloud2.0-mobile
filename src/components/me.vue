@@ -2,18 +2,19 @@
   <div>
     <group>  
        <!-- <div class="widget-content mine-top-view text-left cardStyle-rewrite ">          -->
-      <div class="widget-content  text-left cardStyle-rewrite ">         
+      <div class="widget-content  text-left cardStyle-rewrite ng-binding">         
       <img src="src/assets/demo/user.svg" class="pull-left pull-img" width="60" height="60">
-        <div class="pull-left pull-div" ng-style="{'line-height':currentGroup.name ? '20px' : '26px','padding-top':currentGroup.name ? '2px' : '4px',}">
+        <div class="pull-left pull-div " ng-style="{'line-height':currentGroup.name ? '20px' : '26px','padding-top':currentGroup.name ? '2px' : '4px',}">
             <span ng-bind="user.name" class="pull-left" style="clear: right;" slot="label">{{ $t('Your Name') }}</span><br>
             <span ng-if="currentGroup.name" ng-bind="currentGroup.name" class="pull-left" slot="label">{{ $t('Your Group') }} </span><br ng-if="currentGroup.name">
             <span ng-bind="user.email" class="pull-left"slot="label">{{ $t('Your Email') }}</span>
-            <div class="clearfix">
-            </div>
+            <!-- <div class="clearfix">
+            </div> -->
         </div>
        </div>
     </group>   
     <group>
+      <div class="ng-binding" >
       <cell is-link :title="$t('Instance List')" link="/InstanceList" >
         <span class="demo-icon" slot="icon">&#xe6f2;</span>
       </cell>
@@ -25,6 +26,7 @@
       </cell>
         <div ui-sref="system_set" class="widget-content widget-content-menu widget-content-font">
         </div>
+      </div>
     </group>
   </div>
 </template>
@@ -157,6 +159,14 @@ Your Email:
 }
 .pull-right {
   float: right !important;
+}
+.pull-div {
+    margin-left: 15px;
+    padding-top: 2px !important;
+}
+.ng-binding {
+    font-size: 14px;
+    color: #505050 ;
 }
 </style>
 

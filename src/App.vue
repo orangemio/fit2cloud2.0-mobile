@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    
-    <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true">Acloud</x-header>
+    <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true" >Acloud</x-header>
     <router-view></router-view>
     <div v-transfer-dom>
       <actionsheet :menus="menus" v-model="showMenus" @on-click-menu="changeLocale"></actionsheet>
