@@ -29,7 +29,27 @@ en:
   Overview Of Resource: Overview Of Resource
   Apply: Apply
   Tasks: Tasks
+  ServiceMenu: Services
+  Tiexi: Tiexi
+  Dadong: Dadong
+  Beijing: Beijing
+  Azure: Azure
+  Lab: Lab
+  Aws: Aws
+  platform: platform
+  apply: apply
   Services: Services
+  付款金额: Total
+  标题标题: Item Title
+  商品: Product
+  很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字: Long Long Long Long Long Long Long Long Long Long Long Long Content
+  名字名字名字: Name Name
+  电动打蛋机: Item title
+  辅助操作: Info
+  操作: Action
+  点击事件: Click Event
+  跳转到首页: Homepage
+  申请虚拟机: Application for Virtual Machine
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -58,5 +78,25 @@ zh-CN:
   Instance List: 虚拟机列表
   Overview Of Resource: 资源概况
   Tasks: 待办事项
-  Services: 服务目录
+  ServiceMenu: 服务目录
   Apply: 申请资源
+  Tiexi: 铁西
+  Dadong: 大东
+  Beijing: 北京
+  Azure: Azure
+  Lab: Lab
+  Aws: Aws
+  platform: 平台
+  apply: 申请
+  Services: 服务目录
+  付款金额: 付款金额
+  标题标题: 标题标题
+  商品: 商品
+  很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字: 很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字
+  名字名字名字: 名字名字名字
+  电动打蛋机: 电动打蛋机
+  辅助操作: 辅助操作
+  操作: 操作
+  点击事件: 点击事件
+  跳转到首页: 跳转到首页
+  申请虚拟机: 申请虚拟机

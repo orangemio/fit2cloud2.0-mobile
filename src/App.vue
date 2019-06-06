@@ -10,9 +10,9 @@
         <img slot="icon" src="./assets/images/icon_nav_article.png">
         <span slot="label">{{ $t('Tasks') }}</span>
       </tabbar-item>
-      <tabbar-item link="/Services">
+      <tabbar-item link="/ServiceMenu">
         <img slot="icon" src="./assets/images/icon_nav_cell.png">
-        <span slot="label">{{ $t('Services') }}</span>
+        <span slot="label">{{ $t('ServiceMenu') }}</span>
       </tabbar-item>
       <tabbar-item link="/Apply">
         <img slot="icon" src="./assets/images/icon_nav_msg.png">
