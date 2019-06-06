@@ -15,6 +15,7 @@ export default {
   },
   methods: {
     showkey () {
+      // 获取最新签名
       var signature = this.COMMON.gethashkey('u82P9DsxIwxOG8ZC', '7fGeaovhswFRcWfc')
       // Demo 从注册到全局的AXIOS中发起Get请求
       this.$http.get('/vm-service/tag/listAll', {
