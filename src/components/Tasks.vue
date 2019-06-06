@@ -15,13 +15,15 @@ export default {
   },
   methods: {
     showkey () {
+      // 获取最新签名
+      var signature = this.COMMON.gethashkey('u82P9DsxIwxOG8ZC', '7fGeaovhswFRcWfc')
       // Demo 从注册到全局的AXIOS中发起Get请求
       this.$http.get('/vm-service/tag/listAll', {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
           'accept': 'application/json',
           'accessKey': '7fGeaovhswFRcWfc',
-          'signature': 'g1W6lRfYAtE0UsIYAC6Q2FOXcDqhYoNDGN2HDMidl7tVoL85ktpwcr/FSGSOkQSI4gNA+saswyO0HwnjnUx2W3x4l5cqPnbm/x/Wg3oLQTo='
+          'signature': signature
         }
       }).then(({data}) => {
         console.log(data)
