@@ -1,8 +1,9 @@
 <template>
-    <x-button @click.native='showkey()'>submit</x-button>
+    <x-button @click.native='getData()'>submit</x-button>
 </template>
 
 <script>
+import http from '@/utils/http'
 import { XButton } from 'vux'
 export default {
   data () {
@@ -28,6 +29,12 @@ export default {
       }).then(({data}) => {
         console.log(data)
       })
+    },
+    getData: async function () {
+      const res = await http.get('/api/vm-service/tag/listAll', {})
+      if (res.data.success) {
+        alert('请求成功')
+      }
     }
   }
 }
