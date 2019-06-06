@@ -1,7 +1,7 @@
 <template>
   <div >
      <tab>
-         <tab-item v-for="n in list2" :key="n" :selected="n==='Tiexi'" @on-item-click="onItemClick">{{ n }}</tab-item>
+         <tab-item v-for="n in list2" :key="n.tagKey" :selected="n.tagName==='Tiexi'" @on-item-click="onItemClick">{{ n.tagName }}</tab-item>
      </tab>
 
      <div class="widget-content">
@@ -42,7 +42,7 @@ Apply:
 
 <script>
 import { Tab, TabItem, FormPreview, XButton, Alert } from 'vux'
-const list = () => ['Tiexi', 'Dadong', 'Beijing', 'Azure', 'Lab', 'Aws']
+const list = () => []
 
 export default {
   components: {
@@ -68,7 +68,9 @@ export default {
       }
     }).then(({data}) => {
       if (data.success === true) {
-        console.log('tags: ', data)
+        this.list2 = data.data
+        console.log(data.data.tagName)
+        console.log(this.list2)
       } else {
         this.showPlugin()
         setTimeout(() => {
