@@ -1,14 +1,10 @@
 <template>
     <div>
         <group>
-        <p>About</p>
+        <p>Overview Of Resource</p>
         </group>       
         <group>
-        <p>User:</p>
-        <p>Display Name:</p>
-        <p>Email::</p>
-        <p>Workspace Name:</p>
-
+        <p>VM </p>
         </group>
     </div>
 </template>

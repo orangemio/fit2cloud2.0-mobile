@@ -1,13 +1,14 @@
 <template>
     <div>
         <group>
-        <p>About</p>
+        <p>Instance List</p>
         </group>       
         <group>
-        <p>User:</p>
-        <p>Display Name:</p>
-        <p>Email::</p>
-        <p>Workspace Name:</p>
+        <p>VM Name:</p>
+        <p>Product: </p>
+        <p>OS:</p>
+        <p>Instance Type:</p>
+        <p>..........</p>
 
         </group>
     </div>

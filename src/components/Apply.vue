@@ -1,24 +1,22 @@
 <template>
   <div >
      <tab>
-         <tab-item v-for="n in list2" :key="n" :selected="n==='Tiexi'" @on-item-click="onItemClick">{{ n }}</tab-item>
+         <tab-item v-for="n in list2" :key="n.tagKey" :selected="n.tagName==='Tiexi'" @on-item-click="onItemClick">{{ n.tagName }}</tab-item>
      </tab>
 
-     <group>
-       <div class="widget-content">
-         <div class="fa-border">
-           <img class="col-3" width="80px" height="80px" src="resource/img/windows.png">
-           <div class="col-7">
-             <img class="col-2-img" src="resource/static/icon/vmware.ico">
-             <h4 class="col-h4" title="Windows Server 2016">Windows Server 2016</h4>
-             <div class="col-div" title="for CL1 / CL2 in Dadong">
-               for CL1 / CL2 in Dadong
-             </div>
-             <x-button mini plain class='col-btn' @click.native='submit()'>Apply</x-button>
+     <div class="widget-content">
+       <div class="fa-border">
+         <img class="col-3" width="80px" height="80px" src="resource/img/windows.png">
+         <div class="col-7">
+           <img class="col-2-img" src="resource/static/icon/vmware.ico">
+           <h4 class="col-h4" title="Windows Server 2016">Windows Server 2016</h4>
+           <div class="col-div" title="for CL1 / CL2 in Dadong">
+             for CL1 / CL2 in Dadong
            </div>
+           <x-button mini plain class='col-btn' @click.native='submit()'>Apply</x-button>
          </div>
        </div>
-     </group>
+     </div>
   </div>
 </template>
 
@@ -43,15 +41,16 @@ Apply:
 </i18n>
 
 <script>
-import { Tab, TabItem, FormPreview, XButton } from 'vux'
-const list = () => ['Tiexi', 'Dadong', 'Beijing', 'Azure', 'Lab', 'Aws']
+import { Tab, TabItem, FormPreview, XButton, Alert } from 'vux'
+const list = () => []
 
 export default {
   components: {
     Tab,
     TabItem,
     FormPreview,
-    XButton
+    XButton,
+    Alert
   },
   data () {
     return {
@@ -59,27 +58,42 @@ export default {
     }
   },
   created () {
-    // 获取最新签名
-    // var signature = this.COMMON.gethashkey('u82P9DsxIwxOG8ZC', '7fGeaovhswFRcWfc')
-    /*
-    this.$http.get('/vm-service/tag/listAll', {
+    // 初始化标签
+    this.$http.get('/api/vm-service/tag/product/list', {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
         'accept': 'application/json',
         'accessKey': '7fGeaovhswFRcWfc',
-        'signature': signature
+        'signature': this.COMMON.gethashkey('u82P9DsxIwxOG8ZC', '7fGeaovhswFRcWfc')
       }
     }).then(({data}) => {
-      console.log(data)
+      if (data.success === true) {
+        this.list2 = data.data
+        console.log(data.data.tagName)
+        console.log(this.list2)
+      } else {
+        this.showPlugin()
+        setTimeout(() => {
+          this.$vux.alert.hide()
+        }, 3000)
+      }
     })
-    */
+    // 初始化产品列表
+    this.$http.get('/api/vm-service/catalog-product/list', {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'accept': 'application/json',
+        'accessKey': 'u21A14T9EXdGUVRS',
+        'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
+      }
+    }).then(({data}) => {
+      console.log('products:', data)
+    })
   },
   methods: {
     onItemClick (index) {
-      alert('切换产品')
     },
     submit () {
-      alert('申请')
     }
   }
 }
