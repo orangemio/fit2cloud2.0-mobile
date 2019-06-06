@@ -97,6 +97,7 @@ export default {
 
 body {
   background-color: #fbf9fe;
+  font-family :'BMW Group Condensed'
 }
 .menu-title {
   color: #888;
