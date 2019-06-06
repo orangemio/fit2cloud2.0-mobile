@@ -42,6 +42,8 @@ Apply:
 
 <script>
 import { Tab, TabItem, FormPreview, XButton, Alert } from 'vux'
+import http from '@/utils/http'
+import api from '@/utils/api'
 const tagList = () => []
 let productList = []
 const allProducts = () => []
@@ -98,19 +100,27 @@ export default {
     submit () {
     },
     // 查询产品列表，默认查询所有产品
-    queryProducts () {
-      this.$http.get('/api/vm-service/catalog-product/list', {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'accept': 'application/json',
-          'accessKey': 'u21A14T9EXdGUVRS',
-          'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
-        }
-      }).then(({data}) => {
-        this.allProducts = data.data
-        this.productList = []
-        console.log('allProducts:', data.data)
-      })
+    queryProducts: async function () {
+      // 马日天的实现方式
+      // this.$http.get('/api/vm-service/catalog-product/list', {
+      //   headers: {
+      //     'Content-Type': 'application/x-www-form-urlencoded',
+      //     'accept': 'application/json',
+      //     'accessKey': 'u21A14T9EXdGUVRS',
+      //     'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
+      //   }
+      // }).then(({data}) => {
+      //   this.allProducts = data.data
+      //   this.productList = []
+      //   console.log('allProducts:', data.data)
+      // })
+
+      // 马彦祖的实现方式
+      const res = await http.get(api.vm_service.catalog_product.list, {})
+      console.log(api.vm_service.catalog_product.list)
+      this.allProducts = res.data.data
+      this.productList = []
+      console.log('allProducts:', res.data)
     },
     // 按标签过滤产品，默认显示第一个标签下的产品并且标签属于选中状态
     selectSingleTag (tagKey) {
