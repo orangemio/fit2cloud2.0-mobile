@@ -41,6 +41,16 @@ en:
   Your Name: Your Name
   Your Group: Your Group
   Your Email: Your Email
+  付款金额: Total
+  标题标题: Item Title
+  商品: Product
+  很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字: Long Long Long Long Long Long Long Long Long Long Long Long Content
+  名字名字名字: Name Name
+  电动打蛋机: Item title
+  辅助操作: Info
+  操作: Action
+  点击事件: Click Event
+  跳转到首页: Homepage
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -82,3 +92,13 @@ zh-CN:
   Your Name: 你的名字
   Your Group: 你的组织
   Your Email: 你的邮箱
+  付款金额: 付款金额
+  标题标题: 标题标题
+  商品: 商品
+  很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字: 很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字
+  名字名字名字: 名字名字名字
+  电动打蛋机: 电动打蛋机
+  辅助操作: 辅助操作
+  操作: 操作
+  点击事件: 点击事件
+  跳转到首页: 跳转到首页
