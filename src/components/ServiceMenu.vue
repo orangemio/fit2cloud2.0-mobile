@@ -1,22 +1,22 @@
 <template>
   <div>
 
-    <div>
+    <div class="repeat">
+
       <group>
-        <cell :title="$t('申请虚拟机')" value="已审批">
+        <cell :title="$t('申请虚拟机')" value="已审批" >
           <span class="demo-icon" slot="icon">&#xe623;&nbsp;&nbsp;</span>
         </cell>
         <cell-form-preview :list="list"></cell-form-preview>
       </group>
       <flexbox>
         <flexbox-item>
-          <x-button type="primary" plain="false">查看订单</x-button>
+          <x-button type="primary" plain>查看订单</x-button>
         </flexbox-item>
         <flexbox-item>
-          <x-button type="primary" plain="false">查看资源日志</x-button>
+          <x-button type="primary" plain>查看资源日志</x-button>
         </flexbox-item>
       </flexbox>
-
     </div>
 
   </div>
@@ -28,7 +28,7 @@
 </i18n>
 
 <script>
-  import {FormPreview, Icon, Group, Cell, XInput, Flexbox, FlexboxItem, CellFormPreview, XButton, Divider} from 'vux'
+  import {FormPreview, Icon, Group, Cell, Grid, GridItem, XInput, Flexbox, FlexboxItem, CellFormPreview, XButton, Divider} from 'vux'
 
   export default {
     components: {
@@ -41,7 +41,9 @@
       XButton,
       Divider,
       Flexbox,
-      FlexboxItem
+      FlexboxItem,
+      Grid,
+      GridItem
     },
     data () {
       return {
@@ -65,26 +67,42 @@
           style: 'primary',
           text: this.$t('查看资源日志'),
           onButtonClick: () => {
-            this.$http.post('/vm-service/order/list/1/10', {
-              applyUser: null,
-              cloudServerName: null,
-              createTimeEnd: null,
-              createTimeStart: null,
-              description: null,
-              id: null,
-              organizationId: null,
-              processId: null,
-              status: null,
-              type: null,
-              workspaceId: null
-            }).then(function (response) {
-              console.log(response)
-            }).catch(function (error) {
-              console.log(error)
-            })
+
           }
         }]
       }
+    },
+    created () {
+      // 初始化标签
+      this.$http.post('/api/vm-service/order/list/1/10', {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'accept': 'application/json',
+          'accessKey': 'SwsP3P2hTM3L0wmR',
+          'signature': this.COMMON.gethashkey('1SOqvay6T55u6mFN', 'SwsP3P2hTM3L0wmR')
+        },
+        // URL参数
+        // 必须是一个纯对象或者 URL参数对象
+        params: {
+          applyUser: null,
+          cloudServerName: null,
+          createTimeEnd: null,
+          createTimeStart: null,
+          description: null,
+          id: null,
+          organizationId: null,
+          processId: null,
+          status: null,
+          type: null,
+          workspaceId: null
+        }
+      }).then(({data}) => {
+        console.log(data)
+      })
     }
   }
 </script>
+<style>
+  .weui-cell__ft {
+  }
+</style>
