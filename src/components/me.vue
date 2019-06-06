@@ -1,17 +1,13 @@
 <template>
   <div>
     <group>  
-       <!-- <div class="widget-content mine-top-view text-left cardStyle-rewrite ">          -->
-      <div class="widget-content  text-left cardStyle-rewrite ng-binding">         
       <img src="src/assets/demo/user.svg" class="pull-left pull-img" width="60" height="60">
-        <div class="pull-left pull-div " ng-style="{'line-height':currentGroup.name ? '20px' : '26px','padding-top':currentGroup.name ? '2px' : '4px',}">
-            <span ng-bind="user.name" class="pull-left" style="clear: right;" slot="label">{{ $t('Your Name') }}</span><br>
-            <span ng-if="currentGroup.name" ng-bind="currentGroup.name" class="pull-left" slot="label">{{ $t('Your Group') }} </span><br ng-if="currentGroup.name">
-            <span ng-bind="user.email" class="pull-left"slot="label">{{ $t('Your Email') }}</span>
-            <!-- <div class="clearfix">
-            </div> -->
-        </div>
-       </div>
+        <!-- <div class="pull-left pull-div ng-binding " ng-style="{'line-height':currentGroup.name ? '20px' : '26px','padding-top':currentGroup.name ? '2px' : '4px',}"> -->
+      <div class=" pull-left pull-div ng-binding ">
+            <span ng-bind="user.name" class="font-left" style="clear: right;" slot="label">{{ $t('u0032132') }}</span><br>
+            <span ng-if="currentGroup.name" ng-bind="currentGroup.name" class="font-left" slot="label">{{ $t('BBF-46') }} </span><br ng-if="currentGroup.name">
+            <span ng-bind="user.email" class="font-left" slot="label">{{ $t('Dongyou.Zhai@bmw-brilliance.cn') }}</span>
+      </div>
     </group>   
     <group>
       <div class="ng-binding" >
@@ -52,12 +48,6 @@ Overview Of Resource:
   zh-CN: 资源概况
 About:
   zh-CN: 关于
-Your Name:
-  zh-CN: 你的名字
-Your Group:
-  zh-CN: 你的组织
-Your Email:
-  zh-CN: 你的邮箱
 </i18n>
 
 <style>
@@ -97,18 +87,23 @@ Your Email:
   text-align: left;
 }
 .pull-img {
-    margin-left: 15px;
-    margin-top: 8px
+    margin-left: 20px;
+    margin-top: 14px;
+    margin-bottom: 12px;  
 }
 .pull-left {
   float: left;
 }
 .pull-div {
-    margin-left: 15px;
-    padding-top: 2px !important;
+    margin-top: 10px;
+    padding-top: 15px !important;
 }
-.pull-left { 
-  float: left; 
+.font-left{
+    width: 5%;
+    /* padding-top: -10px; */
+    margin: 40px 0 0 10px;
+
+    width: 300px;
 }
 .fa-desktop:before {
   content: "\f108";
