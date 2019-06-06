@@ -4,9 +4,21 @@
          <tab-item v-for="n in list2" :key="n" :selected="n==='Tiexi'" @on-item-click="onItemClick">{{ n }}</tab-item>
      </tab>
 
-     <div style="margin-top:10px;">
-         <form-preview :header-label="$t('platform')" header-value="plugin" :body-items="list" :footer-buttons="buttons2" name="demo"></form-preview>
-     </div>
+     <group>
+       <div class="widget-content">
+         <div class="fa-border">
+           <img class="col-3" width="80px" height="80px" src="resource/img/windows.png">
+           <div class="col-7">
+             <img class="col-2-img" src="resource/static/icon/vmware.ico">
+             <h4 class="col-h4" title="Windows Server 2016">Windows Server 2016</h4>
+             <div class="col-div" title="for CL1 / CL2 in Dadong">
+               for CL1 / CL2 in Dadong
+             </div>
+             <x-button mini plain class='col-btn' @click.native='submit()'>Apply</x-button>
+           </div>
+         </div>
+       </div>
+     </group>
   </div>
 </template>
 
@@ -26,50 +38,48 @@ Aws:
   zh-CN: Aws
 platform:
   zh-CN: 平台
-apply:
+Apply:
   zh-CN: 申请
 </i18n>
 
 <script>
-import { Tab, TabItem, FormPreview } from 'vux'
+import { Tab, TabItem, FormPreview, XButton } from 'vux'
 const list = () => ['Tiexi', 'Dadong', 'Beijing', 'Azure', 'Lab', 'Aws']
 
 export default {
   components: {
     Tab,
     TabItem,
-    FormPreview
+    FormPreview,
+    XButton
   },
   data () {
     return {
-      list: [{
-        label: '',
-        value: 'CentOS 7.3'
-      }, {
-        label: '',
-        value: 'for CL3'
-      }, {
-        label: '标题标题',
-        value: '很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字'
-      }],
-      buttons2: [{
-        style: 'primary',
-        text: this.$t('apply'),
-        onButtonClick: (name) => {
-          alert(`clicking ${name}`)
-        }
-      }],
       list2: list()
     }
   },
   created () {
-    this.$http.get('/http://103.235.232.207/vm-service/catalog-product/list').then(({data}) => {
+    // 获取最新签名
+    // var signature = this.COMMON.gethashkey('u82P9DsxIwxOG8ZC', '7fGeaovhswFRcWfc')
+    /*
+    this.$http.get('/vm-service/tag/listAll', {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'accept': 'application/json',
+        'accessKey': '7fGeaovhswFRcWfc',
+        'signature': signature
+      }
+    }).then(({data}) => {
       console.log(data)
     })
+    */
   },
   methods: {
     onItemClick (index) {
-      console.log('on item click:', index)
+      alert('切换产品')
+    },
+    submit () {
+      alert('申请')
     }
   }
 }
@@ -79,6 +89,62 @@ export default {
 <style lang="less" scoped>
 @import '~vux/src/styles/1px.less';
 @import '~vux/src/styles/center.less';
+
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
+}
+.widget-content {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 100%;
+    margin-top:10px;
+}
+.col-3{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding: 0px;
+    margin: 10px 5px;
+}
+.col-7 {
+    width: 72%;
+    padding-top: 10px;
+    float: right;
+    margin: 10px 0 0 5px;
+    font-size: 14px;
+}
+.col-h4{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    margin: 5px 0;
+}
+.col-div{
+    width:80%;
+}
+.col-2-img{
+    float: right;
+    margin: -10px 20px 0 0;
+}
+.col-2-a{
+    float: right;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: rgba(28, 105, 212, 1);
+    border-radius: 5px;
+}
+.btn-default{
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+}
+.col-btn{
+    float: right;
+    margin: 0 10px 10% 0;
+}
 
 </style>
 
