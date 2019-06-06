@@ -1,0 +1,188 @@
+/*!
+ * 定制样式表，为了调整控件的一部分，零散的css放这里
+ */
+.echart-panel {
+    background: #FFFFFF;
+}
+
+.echart-panel-title {
+    color: #212121;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+    background-color: #FBFCFD;
+    border: 1px solid #e1e1e1;
+}
+
+.echart-panel-content {
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    margin-top: -1px;
+}
+
+.no-right-padding {
+    padding-right: 0;
+}
+
+.dashboard-template {
+    height: 420px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer-events-none {
+    pointer-events: none
+}
+
+.nav-tabs-native > li.active > a {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.resource-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background-color: #FFFFFF;
+}
+
+.resource-info .form {
+}
+
+.resource-info pre {
+    background-color: white;
+    font-size: 14px;
+    line-height: 150%;
+    border: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.resource-info .col-md-2 .control-label {
+    float: right;
+}
+
+.required-input, .required-input + .chosen-container > .chosen-single, .required-input + .chosen-container > .chosen-choices, .container input:invalid {
+    border: 1px solid #ff731e !important;
+    border-color: #ff731e !important;
+}
+
+.disabled-input-no-border {
+    border: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+}
+
+.pie-chart-custom {
+    height: 180px;
+}
+
+.dashboard-template-div > .widget {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    background: #ffffff;
+}
+
+/*拖拽时进入拖拽区时的样式*/
+.table-harvest-fund tbody > tr.drag-enter > td {
+    background-color: rgba(121, 121, 142, 0.57);
+    border-top: 1px solid rgba(121, 121, 142, 0.57);
+    border-bottom: 1px solid rgba(121, 121, 142, 0.57);
+}
+
+.col-md-2-5 {
+    width: 20%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-md-2-5:first-child {
+    padding-right: 5px;
+}
+
+.col-md-2-5 + .col-md-2-5 {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.col-md-2-5:last-child {
+    padding-right: 15px;
+}
+
+.modal-cost {
+    max-height: 100%;
+}
+
+.modal-cost .modal-dialog {
+    height: 90%;
+    width: 80%;
+}
+
+.modal-cost .modal-content {
+    height: 100%;
+    /*overflow-y: auto;*/
+}
+
+.cost-modal-height {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-left: -32px;
+    margin-right: -32px;
+    min-height: 500px;
+    max-height: 100%;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.modal-trend-detail {
+    max-height: 100%;
+}
+
+.modal-trend-detail .modal-dialog {
+    width: 80%;
+}
+
+.modal-trend-detail .modal-content {
+    height: 100%;
+    /*overflow-y: auto;*/
+}
+
+.elm {
+    /*Firefox*/
+    height: -moz-calc(100% - 110px);
+    /*chrome safari*/
+    height: -webkit-calc(100% - 110px);
+    /*Standard */
+    height: calc(100% - 110px);
+}
+
+.elm .radio-inline {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.form-control, .chosen-container .chosen-single, .chosen-container .chosen-single span {
+    height: 30px;
+    line-height: 30px;
+}
+
+.chosen-container-single .chosen-single abbr {
+    top: 10px;
+}
+
+.chosen-container-single .chosen-single div b {
+    background: 0 5px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -18px 5px;
+}

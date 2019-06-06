@@ -1,0 +1,288 @@
+/*BOTTOM BAR START*/
+.container-fluid,.navbar-nav,.container-fluid,.navbar-default{
+    margin: 0px;
+    padding:0px;
+    border:0px;
+}
+
+.navbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10%;
+    line-height: 36px;
+    background: white;
+    z-index: 1000;
+    bottom:0px;
+    padding:2px 5px;
+}
+.navbar-nav,.container-fluid{
+    width:100%;
+}
+
+.navbar-nav li{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.navbar-nav li img{
+    width: 20px;
+    height: 20px;
+}
+
+.navbar-default .navbar-nav>.active>a
+, .navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover
+{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color:#000000;
+}
+/*BOTTOM BAR END*/
+
+/*CONTENT FRAME START*/
+.mainbar{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-body{
+    padding: 10px;
+}
+
+.wminimize{
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+    padding: 3px 6px 3px 0px;
+    border-color: #333333;
+}
+/*CONTENT FRAME END*/
+
+/*CONTENT START*/
+.white-bgclolr{
+    background-color: white;
+}
+
+.gray-bgcolor{
+    background-color: #FCFCFC;
+}
+
+.row{
+    width: 100%;
+    margin: 0px;
+}
+
+.well .table input[type='button']{
+    padding: 4px 6px;
+}
+
+/*.pager .ng-pagination ul li{
+    padding: 2px 4px;
+    min-width: 30px;
+    min-height: 30px;
+}*/
+
+button.padding-right-10{
+    padding-right: 10px;
+}
+
+.padding-right-10,.handle-page-return{
+    padding-right: 10px;
+}
+
+.padding-left-10{
+    padding-left: 10px;
+}
+
+.padding-left-25{
+    padding-left: 25px;
+}
+
+.padding-0{
+    padding:0px;
+}
+
+.padding-only-left-10{
+    padding:0 0 0 10px;
+}
+
+.table tbody > tr > .padding-left-25{
+    padding-left: 25px;
+}
+
+.margin-left-10{
+    margin-left: 10px;
+}
+
+.margin-right-10{
+    margin-right: 10px;
+}
+
+.content-list-item{
+    padding: 5px 0px 0px 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: white;
+}
+
+.content-frame{
+    top: 0px;
+    bottom: 0px;
+    margin: 50px 0 55px 0;/*底栏多高 margin-bottom就是多少*/
+}
+
+.content-title-btn{
+    margin-top: -26px;
+    position: relative;
+}
+
+.title-back-btn{
+    float: left;
+    margin-top: -40px;
+    position: relative;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.title-back-btn i{
+    margin: 2px 0 0 2px;
+}
+
+.btn-mobile{
+    padding: 4px 6px;
+}
+
+.widget-content-list{
+    padding-top: 15px;
+}
+
+.widget .widget-content-list{
+    background-color: #f0f0f0;
+}
+
+.widget-content-list .content-list-item .td-title{
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.modal-scroll{
+    overflow: auto;
+    padding: 5px 3px;
+}
+
+.modal-scroll .modal-content{
+    border: 0px;
+}
+
+.modal-scroll .modal-body{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.modal-scroll .title-back-btn{
+    margin-left: 0px;
+}
+
+.widget-menu{
+    padding-top: 20px;
+    border: 0px;
+}
+
+.widget-menu .widget-content-menu{
+    padding: 10px 15px;
+    border-top: 1px solid #DFDFDF;
+    height: 47px;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.mine-top-view{
+    margin-bottom: 15px;
+    padding: 15px 10px;
+    background-color: #405784 !important;
+    color: #ffffff;
+}
+
+.widget-menu .widget-content-menu:last-child{
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.widget-content-menu span:first-child{
+    margin-right: 15px;
+}
+
+.widget-content-menu span:last-child{
+    margin-top: 6px;
+}
+
+.table-left-title{
+    text-align: left;
+    font-weight: 600;
+    padding-left: 30px !important;
+}
+
+.widget-content-list .table-selected{
+    background-color: white;
+    border: 1px solid #00c1de;
+    box-shadow: 0 0 20px rgba(0, 198, 226, .5);
+}
+
+.no-border{
+    border: 0px;
+}
+
+.ng-pagination>ul {
+    width: 100%;
+    text-align: center;
+    text-align: center;
+}
+
+.log-right-td{
+    width: 65% !important;;
+    padding-left: 0px !important;
+}
+
+.log-left-td{
+    text-align: right !important;
+}
+
+.information-title{
+    text-align: right;
+    padding-right: 5px;
+    padding-left: 0px;
+}
+/*CONTENT END*/
+
+/*处理订单 START*/
+.nav>li>a{
+    padding: 5px 8px;
+}
+
+.widget .nav-tabs > li a{
+    padding: 3px 5px;
+}
+
+.label-middle{
+    padding: 10px 15px;
+    margin: 0px;
+}
+
+.special .form-control,.special  .chosen-container .chosen-single,.special  .chosen-container .chosen-single span{
+    line-height: 20px;
+    font-size: 12px;
+}
+/*处理订单 END*/
+
+
+.widget .widget-content-list{
+    background-color: #f0f0f0;
+}
+
+/*modal弹框*/
+.modal-content{
+    padding: 0 10px;
+}

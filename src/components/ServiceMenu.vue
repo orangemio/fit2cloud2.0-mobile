@@ -1,9 +1,24 @@
 <template>
   <div>
-    <form-preview :header-label="$t('申请虚拟机')"  header-value="已完成" :body-items="list"
-                  :footer-buttons="button">
 
-    </form-preview>
+    <div>
+      <group>
+        <cell :title="$t('申请虚拟机')" value="已审批">
+          <span class="demo-icon" slot="icon">&#xe623;&nbsp;&nbsp;</span>
+        </cell>
+        <cell-form-preview :list="list"></cell-form-preview>
+      </group>
+      <flexbox>
+        <flexbox-item>
+          <x-button type="primary" plain="false">查看订单</x-button>
+        </flexbox-item>
+        <flexbox-item>
+          <x-button type="primary" plain="false">查看资源日志</x-button>
+        </flexbox-item>
+      </flexbox>
+
+    </div>
+
   </div>
 </template>
 
@@ -13,16 +28,33 @@
 </i18n>
 
 <script>
-  import {FormPreview, Icon} from 'vux'
+  import {FormPreview, Icon, Group, Cell, XInput, Flexbox, FlexboxItem, CellFormPreview, XButton, Divider} from 'vux'
 
   export default {
     components: {
       FormPreview,
-      Icon
+      Icon,
+      Group,
+      Cell,
+      XInput,
+      CellFormPreview,
+      XButton,
+      Divider,
+      Flexbox,
+      FlexboxItem
     },
     data () {
       return {
-        list: [],
+        list: [{
+          label: '<span class="demo-icon" slot="icon">&#xe613;&nbsp;&nbsp;</span>' + '申请人',
+          value: '3.29'
+        }, {
+          label: '<span class="demo-icon" slot="icon">&#xe7a4;&nbsp;&nbsp;</span>' + '开始时间',
+          value: '8.00'
+        }, {
+          label: '<span class="demo-icon" slot="icon">&#xe602;&nbsp;&nbsp;</span>' + '相关资源',
+          value: '8.00'
+        }],
         button: [{
           style: 'primary',
           text: this.$t('查看订单'),
