@@ -1,17 +1,17 @@
 <template>
   <div >
      <tab>
-         <tab-item v-for="n in list2" :key="n.tagKey" :selected="n.tagName==='Tiexi'" @on-item-click="onItemClick">{{ n.tagName }}</tab-item>
+         <tab-item v-for="tag in tagList" :key="tag.tagKey" :selected="tag.tagName==='Tiexi'" @on-item-click="onItemClick">{{ tag.tagName }}</tab-item>
      </tab>
 
-     <div class="widget-content">
+     <div class="widget-content" v-for="product in productList">
        <div class="fa-border">
-         <img class="col-3" width="80px" height="80px" src="resource/img/windows.png">
+         <img class="col-3" width="80px" height="80px" :src= product.iconUrl >
          <div class="col-7">
-           <img class="col-2-img" src="resource/static/icon/vmware.ico">
-           <h4 class="col-h4" title="Windows Server 2016">Windows Server 2016</h4>
-           <div class="col-div" title="for CL1 / CL2 in Dadong">
-             for CL1 / CL2 in Dadong
+           <img class="col-2-img" src="web-public/fit2cloud/static/icon/vmware.ico">
+           <h4 class="col-h4" title="Windows Server 2016">{{ product.name }}</h4>
+           <div class="col-div" title="product.description">
+             {{ product.description }}
            </div>
            <x-button mini plain class='col-btn' @click.native='submit()'>Apply</x-button>
          </div>
@@ -42,7 +42,8 @@ Apply:
 
 <script>
 import { Tab, TabItem, FormPreview, XButton, Alert } from 'vux'
-const list = () => []
+const tagList = () => []
+const productList = () => []
 
 export default {
   components: {
@@ -54,7 +55,8 @@ export default {
   },
   data () {
     return {
-      list2: list()
+      tagList: tagList(),
+      productList: productList()
     }
   },
   created () {
@@ -68,9 +70,8 @@ export default {
       }
     }).then(({data}) => {
       if (data.success === true) {
-        this.list2 = data.data
-        console.log(data.data.tagName)
-        console.log(this.list2)
+        this.tagList = data.data
+        console.log('tagList:', data.data)
       } else {
         this.showPlugin()
         setTimeout(() => {
@@ -87,7 +88,8 @@ export default {
         'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
       }
     }).then(({data}) => {
-      console.log('products:', data)
+      this.productList = data.data
+      console.log('productList:', data.data)
     })
   },
   methods: {
@@ -128,6 +130,7 @@ export default {
     float: right;
     margin: 10px 0 0 5px;
     font-size: 14px;
+    height: 50px;
 }
 .col-h4{
     overflow:hidden;
