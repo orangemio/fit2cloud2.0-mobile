@@ -14,13 +14,13 @@
        </div>
     </group>   
     <group>
-      <cell is-link :title="$t('Instance List')" link="/component/tabbar-simple" >
+      <cell is-link :title="$t('Instance List')" link="/InstanceList" >
         <span class="demo-icon" slot="icon">&#xe6f2;</span>
       </cell>
-      <cell is-link :title="$t('Overview Of Resource')"  link="/component/tabbar-icon">
+      <cell is-link :title="$t('Overview Of Resource')"  link="/overview">
         <span class="demo-icon" slot="icon">&#xe653;</span>
       </cell>
-      <cell is-link :title="$t('About')" link="/component/tabbar-icon">
+      <cell is-link :title="$t('About')" link="/about">
         <span class="demo-icon" slot="icon">&#xe641;</span>
       </cell>
         <div ui-sref="system_set" class="widget-content widget-content-menu widget-content-font">
@@ -121,7 +121,7 @@ Your Email:
 /* __________下面三个选项框的css____________ */
 .widget-content-font {
     color: rgba(51, 51, 51, 1);
-    font-size: 16px;
+    font-size: 12px;
 }
 .widget .widget-content {
     position: relative;

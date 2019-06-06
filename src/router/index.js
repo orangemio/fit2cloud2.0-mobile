@@ -7,6 +7,8 @@ import Services from '@/components/Services'
 import Apply from '@/components/Apply'
 import me from '@/components/me'
 import about from '@/components/about'
+import overview from '@/components/overview'
+import InstanceList from '@/components/InstanceList'
 
 Vue.use(Router)
 
@@ -41,6 +43,16 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: about
+    },
+    {
+      path: '/overview',
+      name: 'overview',
+      component: overview
+    },
+    {
+      path: '/InstanceList',
+      name: 'InstanceList',
+      component: InstanceList
     }
   ]
 })
