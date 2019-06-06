@@ -15,7 +15,16 @@ export default {
   },
   methods: {
     showkey () {
-      console.log(this.COMMON.gethashkey('u82P9DsxIwxOG8ZC', '7fGeaovhswFRcWfc'))
+      this.$http.get('/vm-service/quota/org/current', {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          accept: 'application/json',
+          accessKey: '7fGeaovhswFRcWfc',
+          signature: 'g1W6lRfYAtE0UsIYAC6Q2FAi1oBfGK164DxIhQJXwU3NsXOskr/qkMjT7Yqnbaxa2vVFf3BUGT34JMM/TXv5d/iSNBrn4jGxbYJHA7Jo59E='
+        }
+      }).then(({data}) => {
+        console.log(data)
+      })
     }
   }
 }

@@ -11,11 +11,13 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/':{  
-        target:'http://103.235.232.207/'//设置调用的接口域名和端口号 ( 设置代理目标)
-      },
-      '/*':{
-       target:'http://103.235.232.207/'
+      "/": {
+        target: "http://192.168.1.182:6610/",
+        secure: false,
+        changeOrigin: true,
+        pathRewrite: {
+          "^/*": ""
+        }
       }
     },
 
