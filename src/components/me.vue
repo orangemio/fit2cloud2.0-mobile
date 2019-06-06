@@ -2,7 +2,6 @@
   <div>
     <group>  
       <img src="src/assets/demo/user.svg" class="pull-left pull-img" width="60" height="60">
-        <!-- <div class="pull-left pull-div ng-binding " ng-style="{'line-height':currentGroup.name ? '20px' : '26px','padding-top':currentGroup.name ? '2px' : '4px',}"> -->
       <div class=" pull-left pull-div ng-binding ">
             <span ng-bind="user.name" class="font-left" style="clear: right;" slot="label">{{ $t('u0032132') }}</span><br>
             <span ng-if="currentGroup.name" ng-bind="currentGroup.name" class="font-left" slot="label">{{ $t('BBF-46') }} </span><br ng-if="currentGroup.name">
@@ -95,7 +94,7 @@ About:
   float: left;
 }
 .pull-div {
-    margin-top: 10px;
+    margin-top: 15px;
     padding-top: 15px !important;
 }
 .font-left{
