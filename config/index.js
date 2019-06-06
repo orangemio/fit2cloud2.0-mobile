@@ -10,9 +10,10 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    //跨域配置 DEV版本使用Proxy接口
     proxyTable: {
       "/": {
-        target: "http://192.168.1.182:6610/",
+        target: "http://103.235.232.207",
         secure: false,
         changeOrigin: true,
         pathRewrite: {

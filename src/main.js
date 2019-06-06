@@ -54,16 +54,6 @@ new Vue({
   router,
   render: h => h(App),
   methods: {
-    getInfo () {
-      this.$http.get('/vm-service/quota/org/current', {
-        headers: {
-          accept: 'application/json',
-          accessKey: '7fGeaovhswFRcWfc',
-          signature: 'g1W6lRfYAtE0UsIYAC6Q2FAi1oBfGK164DxIhQJXwU3NsXOskr/qkMjT7Yqnbaxa2vVFf3BUGT34JMM/TXv5d/iSNBrn4jGxbYJHA7Jo59E='
-        }
-      }).then(({data}) => {
-        console.log(data)
-      })
-    }
+
   }
 }).$mount('#app-box')
