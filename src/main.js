@@ -10,6 +10,9 @@ import { AjaxPlugin, LocalePlugin } from 'vux' // load AjaxPlugin module
 import vuexI18n from 'vuex-i18n' // load vuex i18n module
 import vuxLocales from './locales/all.yml'
 import componentsLocales from './locales/components.yml'
+// 公用组件
+import global from '@/components/common.vue'
+Vue.prototype.COMMON = global
 
 // require('es6-promise').polyfill()
 
@@ -49,5 +52,8 @@ Vue.config.productionTip = false
 new Vue({
   store,
   router,
-  render: h => h(App)
+  render: h => h(App),
+  methods: {
+
+  }
 }).$mount('#app-box')
