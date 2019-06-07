@@ -1,7 +1,7 @@
 <template>
     <div>
     <x-button @click.native='showkey()'>获取最新Tag</x-button>
-     <form-preview :header-label="$t('付款金额')" header-value="¥2400.00" :body-items="list" :footer-buttons="buttons1"></form-preview>
+    <form-preview :header-label="$t('付款金额')" header-value="¥2400.00" :body-items="list" :footer-buttons="buttons1"></form-preview>
     </div>
 </template>
 
@@ -29,6 +29,8 @@
 </i18n>
 
 <script>
+// import http from '@/utils/http'
+import { XButton } from 'vux'
 import { XButton, FormPreview } from 'vux'
 export default {
   data () {
@@ -62,7 +64,7 @@ export default {
       // 获取最新签名
       var signature = this.COMMON.gethashkey('u82P9DsxIwxOG8ZC', '7fGeaovhswFRcWfc')
       // Demo 从注册到全局的AXIOS中发起Get请求
-      this.$http.get('/vm-service/tag/listAll', {
+      this.$http.get('/api/vm-service/tag/listAll', {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
           'accept': 'application/json',

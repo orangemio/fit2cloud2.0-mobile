@@ -29,7 +29,7 @@ en:
   Overview Of Resource: Overview Of Resource
   Apply: Apply
   Tasks: Tasks
-  Services: Services
+  ServiceMenu: Services
   Tiexi: Tiexi
   Dadong: Dadong
   Beijing: Beijing
@@ -38,9 +38,7 @@ en:
   Aws: Aws
   platform: platform
   apply: apply
-  Your Name: Your Name
-  Your Group: Your Group
-  Your Email: Your Email
+  Services: Services
   付款金额: Total
   标题标题: Item Title
   商品: Product
@@ -51,6 +49,32 @@ en:
   操作: Action
   点击事件: Click Event
   跳转到首页: Homepage
+  申请虚拟机: Application for Virtual Machine
+  Your Name: Your Name
+  Your Group: Your Group
+  Your Email: Your Email
+  My Account: My Account
+  Protected: Protected
+  Use is-link to show arrow: Use is-link to show arrow
+  Notifications: Notifications
+  Enabled: Enabled
+  Privacy: Privacy
+  General: General
+  Use slot for complicated content: Use slot for complicated content
+  Slot content: Slot content
+  'Hi, I''m Vux.': 'Hi, I''m Vux.'
+  is-link is set to true automatically when link exists: is-link is set to true automatically when link exists
+  Go to Radio Demo: Go to Radio Demo
+  Go to Demo: Go to Demo
+  Http link: Http link
+  Money: Money
+  Collapse: Collapse
+  Title 001: Title 001
+  Title 002: Title 002
+  Title 003: Title 003
+  Animated: Animated
+  Withdraw: Withdraw
+  Messages: Messages
 zh-CN:
   Prevent auto closing: 不自动关闭
   Close me: 点我关闭
@@ -79,8 +103,8 @@ zh-CN:
   Instance List: 虚拟机列表
   Overview Of Resource: 资源概况
   Tasks: 待办事项
-  Services: 服务目录
-  Apply: 申请资源
+  ServiceMenu: 服务目录
+  Apply: 申请
   Tiexi: 铁西
   Dadong: 大东
   Beijing: 北京
@@ -89,9 +113,43 @@ zh-CN:
   Aws: Aws
   platform: 平台
   apply: 申请
+  Services: 服务目录
+  付款金额: 付款金额
+  标题标题: 标题标题
+  商品: 商品
+  很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字: 很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字
+  名字名字名字: 名字名字名字
+  电动打蛋机: 电动打蛋机
+  辅助操作: 辅助操作
+  操作: 操作
+  点击事件: 点击事件
+  跳转到首页: 跳转到首页
+  申请虚拟机: 申请虚拟机
   Your Name: 你的名字
   Your Group: 你的组织
   Your Email: 你的邮箱
+  My Account: 我的账号
+  Protected: 保护中
+  Use is-link to show arrow: 使用 is-link 显示右边箭头
+  Notifications: 通知
+  Enabled: 已开启
+  Privacy: 隐私
+  General: 通用
+  Use slot for complicated content: 使用slot显示复杂内容
+  Slot content: slot 内容
+  'Hi, I''m Vux.': 你好哇，感谢关注 Vux
+  is-link is set to true automatically when link exists: 当设有 link 属性时，会自动产生箭头效果，无需再设置 is-link
+  Go to Radio Demo: 前往Radio页面
+  Go to Demo: 前往Demo页面
+  Http link: 站外链接
+  Money: 余额
+  Collapse: 折叠
+  Title 001: 标题一
+  Title 002: 标题二
+  Title 003: 标题三
+  Animated: 动画效果
+  Withdraw: 提现
+  Messages: 消息
   付款金额: 付款金额
   标题标题: 标题标题
   商品: 商品

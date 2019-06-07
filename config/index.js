@@ -12,12 +12,12 @@ module.exports = {
     assetsPublicPath: '/',
     //跨域配置 DEV版本使用Proxy接口
     proxyTable: {
-      "/": {
+      "/api": {
         target: "http://103.235.232.207",
         secure: false,
         changeOrigin: true,
         pathRewrite: {
-          "^/*": ""
+          "^/api": ""
         }
       }
     },

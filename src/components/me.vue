@@ -2,29 +2,31 @@
   <div>
     <group>  
        <!-- <div class="widget-content mine-top-view text-left cardStyle-rewrite ">          -->
-      <div class="widget-content  text-left cardStyle-rewrite ">         
+      <div class="widget-content  text-left cardStyle-rewrite ng-binding">         
       <img src="src/assets/demo/user.svg" class="pull-left pull-img" width="60" height="60">
-        <div class="pull-left pull-div" ng-style="{'line-height':currentGroup.name ? '20px' : '26px','padding-top':currentGroup.name ? '2px' : '4px',}">
+        <div class="pull-left pull-div " ng-style="{'line-height':currentGroup.name ? '20px' : '26px','padding-top':currentGroup.name ? '2px' : '4px',}">
             <span ng-bind="user.name" class="pull-left" style="clear: right;" slot="label">{{ $t('Your Name') }}</span><br>
             <span ng-if="currentGroup.name" ng-bind="currentGroup.name" class="pull-left" slot="label">{{ $t('Your Group') }} </span><br ng-if="currentGroup.name">
             <span ng-bind="user.email" class="pull-left"slot="label">{{ $t('Your Email') }}</span>
-            <div class="clearfix">
-            </div>
+            <!-- <div class="clearfix">
+            </div> -->
         </div>
        </div>
     </group>   
     <group>
-      <cell is-link :title="$t('Instance List')" link="/component/tabbar-simple" >
+      <div class="ng-binding" >
+      <cell is-link :title="$t('Instance List')" link="/InstanceList" >
         <span class="demo-icon" slot="icon">&#xe6f2;</span>
       </cell>
-      <cell is-link :title="$t('Overview Of Resource')"  link="/component/tabbar-icon">
+      <cell is-link :title="$t('Overview Of Resource')"  link="/overview">
         <span class="demo-icon" slot="icon">&#xe653;</span>
       </cell>
-      <cell is-link :title="$t('About')" link="/component/tabbar-icon">
+      <cell is-link :title="$t('About')" link="/about">
         <span class="demo-icon" slot="icon">&#xe641;</span>
       </cell>
         <div ui-sref="system_set" class="widget-content widget-content-menu widget-content-font">
         </div>
+      </div>
     </group>
   </div>
 </template>
@@ -121,7 +123,7 @@ Your Email:
 /* __________下面三个选项框的css____________ */
 .widget-content-font {
     color: rgba(51, 51, 51, 1);
-    font-size: 16px;
+    font-size: 12px;
 }
 .widget .widget-content {
     position: relative;
@@ -157,6 +159,14 @@ Your Email:
 }
 .pull-right {
   float: right !important;
+}
+.pull-div {
+    margin-left: 15px;
+    padding-top: 2px !important;
+}
+.ng-binding {
+    font-size: 14px;
+    color: #505050 ;
 }
 </style>
 
