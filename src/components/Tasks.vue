@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="widget-task">
       <br>
       <form-preview  :body-items="list" :footer-buttons="buttons1"></form-preview>
       <br>
@@ -42,6 +42,8 @@ export default {
         }
       }]
     }
+  },
+  Created () {
   },
   components: {
     FormPreview
