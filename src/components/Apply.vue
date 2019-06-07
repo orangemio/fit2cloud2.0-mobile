@@ -91,7 +91,7 @@ export default {
     //   }
     // })
     // 马彦祖的实现方式
-    http(apiSetting.getProductList).then((res) => {
+    http(apiSetting.vm_service.getProductList).then((res) => {
       if (res.data.success === true) {
         this.tagList = res.data.data
         console.log('tagList:', res.data.data)
@@ -139,7 +139,7 @@ export default {
       // this.productList = []
       // console.log('allProducts:', res.data)
       // 马彦祖的实现方式版本二
-      http(apiSetting.getCatalogProduct).then((res) => {
+      http(apiSetting.vm_service.getCatalogProduct).then((res) => {
         this.allProducts = res.data.data
         this.productList = []
       })
