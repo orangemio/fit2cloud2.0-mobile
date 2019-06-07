@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import http from '@/utils/http'
+// import http from '@/utils/http'
 import { XButton } from 'vux'
 export default {
   data () {
@@ -29,12 +29,6 @@ export default {
       }).then(({data}) => {
         console.log(data)
       })
-    },
-    getData: async function () {
-      const res = await http.get('/api/vm-service/tag/listAll', {})
-      if (res.data.success) {
-        alert('请求成功')
-      }
     }
   }
 }
