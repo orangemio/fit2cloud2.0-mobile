@@ -1,44 +1,8 @@
 en:
-  Prevent auto closing: Prevent auto closing
-  Close me: Close me
-  Deleted~: Deleted~
-  'Slot: header': 'Slot: header'
-  Basic Usage: Basic Usage
-  Android Theme: Android Theme
-  Show cancel menu: Show cancel menu
-  Menu as tips: Menu as tips
-  Prevent closing when clicking mask: Prevent closing when clicking mask
-  Share to friends: Share to friends
-  Share to timeline: Share to timeline
-  Take Photo: Take Photo
-  Choose from photos: Choose from photos
-  Actionsheet header: >-
-    Are you sure?<br/><span style="color:#666;font-size:12px;">Once deleted, you
-    will never find it.</span>
-  '<span style="color:red">Delete</span>': '<span style="color:red">Delete</span>'
-  Array menu: Array menu
-  index: index
-  Demo: Demo
-  me: me
-  tagOne: tagOne
-  tagTwo: tagTwo
-  tagThree: tagThree
-  About: About
-  About me: About me
-  Instance List: Instance List
-  Overview Of Resource: Overview Of Resource
-  Apply: Apply
   Tasks: Tasks
-  ServiceMenu: Services
-  Tiexi: Tiexi
-  Dadong: Dadong
-  Beijing: Beijing
-  Azure: Azure
-  Lab: Lab
-  Aws: Aws
-  platform: platform
-  apply: apply
   Services: Services
+  Apply: Apply
+  me: me
   付款金额: Total
   标题标题: Item Title
   商品: Product
@@ -49,62 +13,40 @@ en:
   操作: Action
   点击事件: Click Event
   跳转到首页: Homepage
+  Tiexi: Tiexi
+  Dadong: Dadong
+  Beijing: Beijing
+  Azure: Azure
+  Lab: Lab
+  Aws: Aws
+  platform: platform
   申请虚拟机: Application for Virtual Machine
+  About me: About me
+  Instance List: Instance List
+  Overview Of Resource: Overview Of Resource
+  About: About
   Your Name: Your Name
   Your Group: Your Group
   Your Email: Your Email
-  My Account: My Account
-  Protected: Protected
-  Use is-link to show arrow: Use is-link to show arrow
-  Notifications: Notifications
-  Enabled: Enabled
-  Privacy: Privacy
-  General: General
-  Use slot for complicated content: Use slot for complicated content
-  Slot content: Slot content
-  'Hi, I''m Vux.': 'Hi, I''m Vux.'
-  is-link is set to true automatically when link exists: is-link is set to true automatically when link exists
-  Go to Radio Demo: Go to Radio Demo
-  Go to Demo: Go to Demo
-  Http link: Http link
-  Money: Money
-  Collapse: Collapse
-  Title 001: Title 001
-  Title 002: Title 002
-  Title 003: Title 003
-  Animated: Animated
-  Withdraw: Withdraw
-  Messages: Messages
+  申请人: Applicant
+  开始时间: Start Time
+  拒绝: Reject
+  查看: Process
 zh-CN:
-  Prevent auto closing: 不自动关闭
-  Close me: 点我关闭
-  Deleted~: 删除成功
-  'Slot: header': 使用 header slot
-  Basic Usage: 基本使用
-  Android Theme: 安卓风格
-  Show cancel menu: 显示取消菜单
-  Menu as tips: 显示提示文字
-  Prevent closing when clicking mask: 点击遮罩区域不自动关闭
-  Share to friends: 分享给朋友
-  Share to timeline: 分享到朋友圈
-  Take Photo: 拍照
-  Choose from photos: 从相册选择
-  Actionsheet header: '确定咩?<br/><span style="color:#666;font-size:12px;">删除后就无法撤消了哦</span>'
-  '<span style="color:red">Delete</span>': '<span style="color:red">删除</span>'
-  Array menu: 使用数组定义菜单
-  index: 首页
-  Demo: 演示页
-  me: 我
-  tagOne: 待办事项
-  tagTwo: 服务目录
-  tagThree: 申请资源
-  About: 关于
-  About me: 关于
-  Instance List: 虚拟机列表
-  Overview Of Resource: 资源概况
   Tasks: 待办事项
-  ServiceMenu: 服务目录
+  Services: 服务目录
   Apply: 申请
+  me: 我
+  付款金额: 付款金额
+  标题标题: 标题标题
+  商品: 商品
+  很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字: 很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字
+  名字名字名字: 名字名字名字
+  电动打蛋机: 电动打蛋机
+  辅助操作: 辅助操作
+  操作: 操作
+  点击事件: 点击事件
+  跳转到首页: 跳转到首页
   Tiexi: 铁西
   Dadong: 大东
   Beijing: 北京
@@ -112,51 +54,15 @@ zh-CN:
   Lab: Lab
   Aws: Aws
   platform: 平台
-  apply: 申请
-  Services: 服务目录
-  付款金额: 付款金额
-  标题标题: 标题标题
-  商品: 商品
-  很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字: 很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字
-  名字名字名字: 名字名字名字
-  电动打蛋机: 电动打蛋机
-  辅助操作: 辅助操作
-  操作: 操作
-  点击事件: 点击事件
-  跳转到首页: 跳转到首页
   申请虚拟机: 申请虚拟机
+  About me: 关于
+  Instance List: 虚拟机列表
+  Overview Of Resource: 资源概况
+  About: 关于
   Your Name: 你的名字
   Your Group: 你的组织
   Your Email: 你的邮箱
-  My Account: 我的账号
-  Protected: 保护中
-  Use is-link to show arrow: 使用 is-link 显示右边箭头
-  Notifications: 通知
-  Enabled: 已开启
-  Privacy: 隐私
-  General: 通用
-  Use slot for complicated content: 使用slot显示复杂内容
-  Slot content: slot 内容
-  'Hi, I''m Vux.': 你好哇，感谢关注 Vux
-  is-link is set to true automatically when link exists: 当设有 link 属性时，会自动产生箭头效果，无需再设置 is-link
-  Go to Radio Demo: 前往Radio页面
-  Go to Demo: 前往Demo页面
-  Http link: 站外链接
-  Money: 余额
-  Collapse: 折叠
-  Title 001: 标题一
-  Title 002: 标题二
-  Title 003: 标题三
-  Animated: 动画效果
-  Withdraw: 提现
-  Messages: 消息
-  付款金额: 付款金额
-  标题标题: 标题标题
-  商品: 商品
-  很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字: 很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字
-  名字名字名字: 名字名字名字
-  电动打蛋机: 电动打蛋机
-  辅助操作: 辅助操作
-  操作: 操作
-  点击事件: 点击事件
-  跳转到首页: 跳转到首页
+  申请人: 申请人
+  开始时间: 开始时间
+  拒绝: 拒绝
+  查看: 查看
