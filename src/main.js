@@ -11,7 +11,9 @@ import vuexI18n from 'vuex-i18n' // load vuex i18n module
 import vuxLocales from './locales/all.yml'
 import componentsLocales from './locales/components.yml'
 // 公用组件
+import api from '@/utils/pull'
 import global from '@/components/common.vue'
+Vue.prototype.api = api
 Vue.prototype.COMMON = global
 
 // require('es6-promise').polyfill()
