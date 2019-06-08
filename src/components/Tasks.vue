@@ -1,9 +1,18 @@
 <template>
     <div class="widget-task">
-      <br>
-      <form-preview  :body-items="list" :footer-buttons="buttons1"></form-preview>
-      <br>
-      <form-preview  :body-items="list" :footer-buttons="buttons1"></form-preview>
+    <br>
+      <button-tab>
+        <button-tab-item @on-item-click="changetask()" selected>{{ $t('待审批') }}</button-tab-item>
+        <button-tab-item @on-item-click="changetask()">{{ $t('已审批') }}</button-tab-item>
+      </button-tab>
+      <div v-if="taskstats">
+        <br>
+        <form-preview   :body-items="list" :footer-buttons="buttons"></form-preview>
+      </div>
+      <div v-if="!taskstats">
+        <br>
+        <form-preview  :body-items="list" :footer-buttons="buttons"></form-preview>
+      </div>
     </div>
 </template>
 
@@ -19,8 +28,7 @@
 </i18n>
 
 <script>
-// import http from '@/utils/http'
-import { FormPreview } from 'vux'
+import { FormPreview, ButtonTab, ButtonTabItem } from 'vux'
 export default {
   data () {
     return {
@@ -31,7 +39,7 @@ export default {
         label: this.$t('开始时间'),
         value: ''
       }],
-      buttons1: [{
+      buttons: [{
         style: 'default',
         text: this.$t('拒绝')
       }, {
@@ -40,15 +48,25 @@ export default {
         onButtonClick: (name) => {
           alert(`clicking ${name}`)
         }
-      }]
+      }],
+      taskstats: true
     }
   },
   Created () {
   },
   components: {
-    FormPreview
+    FormPreview,
+    ButtonTab,
+    ButtonTabItem
   },
   methods: {
+    changetask () {
+      if (this.taskstats === true) {
+        this.taskstats = false
+      } else {
+        this.taskstats = true
+      }
+    }
   }
 }
 </script>
