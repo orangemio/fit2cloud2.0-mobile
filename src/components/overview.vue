@@ -5,19 +5,19 @@
             Overview Of Resource
         </div>
      </group> 
-     <group>
-          VM
-      </group>
-      <group>
-          CPU
-      </group>
-           <group>
-          Mem
-     </group>
-      <group>
-          Disk
-     </group>
-
+        <div class="row">
+            <div style="margin: 5px 0">
+            <div class="echart-panel-title" ng-if="setting.name">
+                VM
+            </div>
+            <div class="echart-panel-content">
+                <div class="pie-chart-custom" style="-webkit-tap-highlight-color: transparent; user-select: none;">
+                    <div style="position: relative; overflow: hidden; width: 357px; height: 180px; cursor: default;">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -62,6 +62,32 @@ export default {
 .ng-binding {
     font-size: 14px;
     color: #505050 ;
+}
+.echart-panel-title {
+    color: #212121;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+    background-color: #FBFCFD;
+    border: 1px solid #e1e1e1;
+}
+.pie-chart-custom {
+    height: 180px;
+}
+.echart-panel-content {
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    margin-top: -1px;
+}
+.row {
+    width: 100%;
+    margin: 0px;
+}
+.col-xs-12 {
+    width: 100%;
+}
+.text-center {
+    text-align: center;
 }
 </style>
 
