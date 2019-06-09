@@ -6,7 +6,7 @@ import Vuex from 'vuex'
 import FastClick from 'fastclick'
 import App from './App'
 import router from './router' // 引入自定义路由
-import { AjaxPlugin, LocalePlugin } from 'vux' // load AjaxPlugin module
+import { LocalePlugin } from 'vux' // load AjaxPlugin module
 import vuexI18n from 'vuex-i18n' // load vuex i18n module
 import vuxLocales from './locales/all.yml'
 import componentsLocales from './locales/components.yml'
@@ -18,7 +18,6 @@ Vue.prototype.COMMON = global
 
 Vue.use(Vuex)
 const store = new Vuex.Store()
-Vue.use(AjaxPlugin)
 Vue.use(LocalePlugin)
 Vue.use(vuexI18n.plugin, store, {
   moduleName: 'i18n'

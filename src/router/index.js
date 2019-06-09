@@ -3,9 +3,9 @@ import Router from 'vue-router'
 // 引用自定义组件
 import Home from '@/components/HelloFromVux'
 import Tasks from '@/components/Tasks'
-import Services from '@/components/Services'
 import Apply from '@/components/Apply'
 import me from '@/components/me'
+import ServiceMenu from '@/components/ServiceMenu'
 import about from '@/components/about'
 import overview from '@/components/overview'
 import InstanceList from '@/components/InstanceList'
@@ -25,9 +25,9 @@ export default new Router({
       component: Tasks
     },
     {
-      path: '/Services',
-      name: 'Services',
-      component: Services
+      path: '/ServiceMenu',
+      name: 'ServiceMenu',
+      component: ServiceMenu
     },
     {
       path: '/Apply',
