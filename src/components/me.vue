@@ -7,6 +7,11 @@
             <span ng-if="currentGroup.name" ng-bind="currentGroup.name" class="font-left" slot="label">{{ $t('BBF-46') }} </span><br ng-if="currentGroup.name">
             <span ng-bind="user.email" class="font-left" slot="label">{{ $t('Dongyou.Zhai@bmw-brilliance.cn') }}</span>
       </div>
+    <group>
+     <tab>
+         <tab-item v-for="n in list2" :key="n.n" :selected="n.id==='admin'" >{{ n.id }}</tab-item>
+     </tab>    
+     </group>
     </group>   
     <group>
       <div class="ng-binding" >
@@ -24,16 +29,63 @@
       </div>
     </group>
   </div>
+
 </template>
 
 <script>
 import { Tabbar, TabbarItem, Group, Cell } from 'vux'
+// import { Tab, TabItem, FormPreview, XButton, Alert } from 'vux'
+const list = () => []
 export default {
   components: {
     Tabbar,
     TabbarItem,
     Group,
     Cell
+  },
+  data () {
+    return {
+      list2: list()
+    }
+  },
+  created () {
+    // 初始化标签
+    this.$http.get('/api/dashboard/user/info', {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'accept': 'application/json',
+        'accessKey': 'u21A14T9EXdGUVRS',
+        'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
+      }
+    }).then(({data}) => {
+      if (data.success === true) {
+        this.list2 = data.data
+        console.log(data.data.id.email)
+        console.log(this.list2)
+      } else {
+        this.showPlugin()
+        setTimeout(() => {
+          this.$vux.alert.hide()
+        }, 3000)
+      }
+    })
+    // 初始化产品列表
+    this.$http.get('/api/vm-service/dashboard/user/info', {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'accept': 'application/json',
+        'accessKey': 'u21A14T9EXdGUVRS',
+        'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
+      }
+    }).then(({data}) => {
+      console.log('products:', data)
+    })
+  },
+  methods: {
+    onItemClick (index) {
+    },
+    submit () {
+    }
   }
 }
 </script>
