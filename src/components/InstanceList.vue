@@ -107,6 +107,33 @@ export default {
     Group,
     Cell
   }
+//   data () {
+//     return {
+//       tagList: tagList(),
+//       productList: productList,
+//       allProducts: allProducts(),
+//       tags: tags()
+//     }
+//   },
+// //   初始化
+//   created () {
+//     http(apiSetting.dashboard.getUserInfo).then((res) => {
+//       if (res.data.success === true) {
+//         this.tagList = res.data.data
+//         console.log('tagList:', res.data.data)
+//         // 调动标签过滤方法，默认调用第一个标签过滤
+//         this.selectSingleTag(this.tagList[0].tagKey)
+//       } else {
+//         // 默认方式有错误
+//         this.showPlugin()
+//         setTimeout(() => {
+//           this.$vux.alert.hide()
+//         }, 3000)
+//       }
+//     })
+// }
+
+//   首页-end
 }
 </script>
 

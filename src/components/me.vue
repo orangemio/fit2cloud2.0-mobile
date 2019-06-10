@@ -3,9 +3,9 @@
     <group>  
       <img src="src/assets/demo/user.svg" class="pull-left pull-img" width="60" height="60">
       <div class=" pull-left pull-div ng-binding ">
-            <span ng-bind="user.name" class="font-left" style="clear: right;" slot="label">{{ $t('u0032132') }}</span><br>
-            <span ng-if="currentGroup.name" ng-bind="currentGroup.name" class="font-left" slot="label">{{ $t('BBF-46') }} </span><br ng-if="currentGroup.name">
-            <span ng-bind="user.email" class="font-left" slot="label">{{ $t('Dongyou.Zhai@bmw-brilliance.cn') }}</span>
+            <span class="font-left" style="clear: right;" slot="label">{{this.Name}}</span><br>
+            <span class="font-left" slot="label">{{ $t('BBF-46') }} </span><br ng-if="currentGroup.name">
+            <span class="font-left" slot="label">{{this.Email}}</span>
       </div>
     <group>
      <tab>
@@ -34,8 +34,10 @@
 
 <script>
 import { Tabbar, TabbarItem, Group, Cell } from 'vux'
+import apiSetting from '@/utils/apiSetting.js'
+import http from '@/utils/httpAxios.js'
 // import { Tab, TabItem, FormPreview, XButton, Alert } from 'vux'
-const list = () => []
+// const list = () => []
 export default {
   components: {
     Tabbar,
@@ -45,40 +47,21 @@ export default {
   },
   data () {
     return {
-      list2: list()
+      Name: '',
+      Title: '',
+      Email: ''
     }
   },
   created () {
-    // 初始化标签
-    this.$http.get('/api/dashboard/user/info', {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'accept': 'application/json',
-        'accessKey': 'u21A14T9EXdGUVRS',
-        'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
+    http(apiSetting.dashboard.getUserInfo).then((res) => {
+      if (res.data.success === true) {
+        this.tagList = res.data.data
+        console.log('tagList:', res.data.data)
+        // 调动标签过滤方法，默认调用第一个标签过滤
+        this.Name = res.data.data.id
+        this.Title = res.data.data.Name
+        this.Email = res.data.data.email
       }
-    }).then(({data}) => {
-      if (data.success === true) {
-        this.list2 = data.data
-        console.log(data.data.id.email)
-        console.log(this.list2)
-      } else {
-        this.showPlugin()
-        setTimeout(() => {
-          this.$vux.alert.hide()
-        }, 3000)
-      }
-    })
-    // 初始化产品列表
-    this.$http.get('/api/vm-service/dashboard/user/info', {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'accept': 'application/json',
-        'accessKey': 'u21A14T9EXdGUVRS',
-        'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
-      }
-    }).then(({data}) => {
-      console.log('products:', data)
     })
   },
   methods: {

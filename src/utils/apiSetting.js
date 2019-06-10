@@ -8,6 +8,12 @@ const serviceModule = {
       url: '/api/vm-service/catalog-product/list',
       method: 'get'
     }
+  },
+  dashboard: {
+    getUserInfo: {
+      url: '/api/dashboard/user/info',
+      method: 'get'
+    }
   }
 }
 const apiSetting = {...serviceModule}
