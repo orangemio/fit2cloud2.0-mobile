@@ -18,6 +18,12 @@ const serviceModule = {
       url: '/api/dashboard/user/info',
       method: 'get'
     }
+  },
+  flow: {
+    getEndTask: {
+      url: '/api/flow/runtime/task/end/1/10',
+      method: 'post'
+    }
   }
 }
 const apiSetting = {...serviceModule}

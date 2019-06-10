@@ -3,23 +3,14 @@ en:
   Services: Services
   Apply: Apply
   me: me
-  付款金额: Total
-  标题标题: Item Title
-  商品: Product
-  很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字: Long Long Long Long Long Long Long Long Long Long Long Long Content
-  名字名字名字: Name Name
-  电动打蛋机: Item title
-  辅助操作: Info
-  操作: Action
-  点击事件: Click Event
-  跳转到首页: Homepage
   About me: About me
   Instance List: Instance List
   Overview Of Resource: Overview Of Resource
   About: About
-  Your Name: Your Name
-  Your Group: Your Group
-  Your Email: Your Email
+  申请人: Applicant
+  开始时间: Start Time
+  拒绝: Reject
+  查看: Process
   Tiexi: Tiexi
   Dadong: Dadong
   Beijing: Beijing
@@ -37,23 +28,14 @@ zh-CN:
   Services: 服务目录
   Apply: 申请
   me: 我
-  付款金额: 付款金额
-  标题标题: 标题标题
-  商品: 商品
-  很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字: 很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字
-  名字名字名字: 名字名字名字
-  电动打蛋机: 电动打蛋机
-  辅助操作: 辅助操作
-  操作: 操作
-  点击事件: 点击事件
-  跳转到首页: 跳转到首页
   About me: 关于
   Instance List: 虚拟机列表
   Overview Of Resource: 资源概况
   About: 关于
-  Your Name: 你的名字
-  Your Group: 你的组织
-  Your Email: 你的邮箱
+  申请人: 申请人
+  开始时间: 开始时间
+  拒绝: 拒绝
+  查看: 查看
   Tiexi: 铁西
   Dadong: 大东
   Beijing: 北京
