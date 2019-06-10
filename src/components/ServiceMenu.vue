@@ -1,12 +1,12 @@
 <template>
   <div>
 
-    <div class="repeat">
+    <div class="repeat" v-for="order in orderList">
       <group>
-        <cell :title="$t('申请虚拟机')" value="已审批" >
+        <cell :title="$t('申请虚拟机')" value="已审批">
           <span class="demo-icon" slot="icon">&#xe623;&nbsp;&nbsp;</span>
         </cell>
-        <cell-form-preview :list="list"></cell-form-preview>
+        <cell-form-preview :list="order"></cell-form-preview>
       </group>
       <flexbox>
         <flexbox-item>
@@ -22,13 +22,30 @@
 </template>
 
 <i18n>
-申请虚拟机:
+  申请虚拟机:
   en: Application for Virtual Machine
 </i18n>
 
 <script>
-  import {FormPreview, Icon, Group, Cell, Grid, GridItem, XInput, Flexbox, FlexboxItem, CellFormPreview, XButton, Divider} from 'vux'
-  import axios from 'axios'
+  import {
+    FormPreview,
+    Icon,
+    Group,
+    Cell,
+    Grid,
+    GridItem,
+    XInput,
+    Flexbox,
+    FlexboxItem,
+    CellFormPreview,
+    XButton,
+    Divider
+  } from 'vux'
+  import http from '@/utils/httpAxios.js'
+  import apiSetting from '@/utils/apiSetting.js'
+  import moment from 'moment'
+  //  分页所有订单
+  let _orderList = []
 
   export default {
     components: {
@@ -47,16 +64,7 @@
     },
     data () {
       return {
-        list: [{
-          label: '<span class="demo-icon" slot="icon">&#xe613;&nbsp;&nbsp;</span>' + '申请人',
-          value: '3.29'
-        }, {
-          label: '<span class="demo-icon" slot="icon">&#xe7a4;&nbsp;&nbsp;</span>' + '开始时间',
-          value: '8.00'
-        }, {
-          label: '<span class="demo-icon" slot="icon">&#xe602;&nbsp;&nbsp;</span>' + '相关资源',
-          value: '8.00'
-        }],
+        orderList: _orderList,
         button: [{
           style: 'primary',
           text: this.$t('查看订单'),
@@ -74,11 +82,30 @@
     },
     created () {
       // 初始化标签
-
+      // 马彦祖的实现方式
+      http(apiSetting.vm_service.getOrderList).then((res) => {
+        if (res.data.success === true) {
+          var orderList = res.data.data.listObject
+          this.selectPage(orderList)
+        }
+      })
+    },
+    methods: {
+      selectPage (orderList) {
+        orderList.forEach(function (order) {
+          let orderJson = [{
+            'label': '<span class="demo-icon" slot="icon">&#xe7a4;&nbsp;&nbsp;</span>申请时间',
+            'value': moment(order.createTime).format('YYYY-MM-DD HH:mm:sss')
+          }, {
+            'label': '<span class="demo-icon" slot="icon">&#xe613;&nbsp;&nbsp;</span>申请人',
+            'value': order.applyUser
+          }]
+          _orderList.push(orderJson)
+        })
+      }
     }
   }
 </script>
 <style>
-  .weui-cell__ft {
-  }
+
 </style>
