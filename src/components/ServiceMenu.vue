@@ -1,6 +1,19 @@
 <template>
   <div>
 
+    <div class="widget">
+      <div class="widget-head">
+        <div class="text-center orderContentFont-rewrite">
+          {{'index_footer_service' | translate}}</div>
+        <div class="widget-icons pull-right content-title-btn orderContentFont-rewrite">
+          <search-op is-close="true" which="'search'"></search-op>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+
+
     <div class="repeat" v-for="order in orderList">
       <group>
         <cell :title="$t('申请虚拟机')" :value=order[2].status >
@@ -129,8 +142,30 @@
     }
   }
 </script>
-<style lang="less">
+<style>
 
+  /*!* Widget *!*/
+  .widget {
+    position: relative;
+    border: 1px solid #DFDFDF;
+    border-radius: 2px;
+    margin-bottom: 10px;
+  }
 
+  .widget .widget-head {
+    position: relative;
+    color: #2B415C;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    background-color: #FCFCFC;
+    border-bottom: 1px solid #E7E7E7;
+  }
+
+  .text-center {
+    text-align: center;
+    /* margin: 0px; */
+    margin-block: 10px;
+  }
 
 </style>
