@@ -3,8 +3,8 @@ import axios from 'axios'
 import CryptoJS from 'crypto-js'
 import uuid from 'uuid/v1'
 
-const SecretKey = 'I9P3PEMaiq2zm2Wu'
-const AccessKey = 'u21A14T9EXdGUVRS'
+const SecretKey = 'u82P9DsxIwxOG8ZC'
+const AccessKey = '7fGeaovhswFRcWfc'
 
 // 请求时的拦截器
 axios.interceptors.request.use(config => {
@@ -92,13 +92,14 @@ const httpServer = (opts, data) => {
         // post 请求的数据
         // 请求头信息
     headers: opts.method === 'get' ? {
-      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-      'accept': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest',
+      'Accept': 'application/json',
+      'Content-Type': 'application/json; charset=UTF-8',
       'accessKey': AccessKey,
       'signature': gethashkey(SecretKey, AccessKey)
     } : {
       'X-Requested-With': 'XMLHttpRequest',
-      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      'Content-Type': 'application/json',
       'accessKey': AccessKey,
       'signature': gethashkey(SecretKey, AccessKey)
     }
