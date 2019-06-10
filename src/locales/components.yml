@@ -32,6 +32,14 @@ en:
   开始时间: Start Time
   拒绝: Reject
   查看: Process
+  Tiexi: Tiexi
+  Dadong: Dadong
+  Beijing: Beijing
+  Azure: Azure
+  Lab: Lab
+  Aws: Aws
+  platform: platform
+  申请虚拟机: Application for Virtual Machine
 zh-CN:
   Tasks: 待办事项
   Services: 服务目录
@@ -66,3 +74,11 @@ zh-CN:
   开始时间: 开始时间
   拒绝: 拒绝
   查看: 查看
+  Tiexi: 铁西
+  Dadong: 大东
+  Beijing: 北京
+  Azure: Azure
+  Lab: Lab
+  Aws: Aws
+  platform: 平台
+  申请虚拟机: 申请虚拟机

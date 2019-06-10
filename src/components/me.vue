@@ -1,17 +1,17 @@
 <template>
   <div>
     <group>  
-       <!-- <div class="widget-content mine-top-view text-left cardStyle-rewrite ">          -->
-      <div class="widget-content  text-left cardStyle-rewrite ng-binding">         
       <img src="src/assets/demo/user.svg" class="pull-left pull-img" width="60" height="60">
-        <div class="pull-left pull-div " ng-style="{'line-height':currentGroup.name ? '20px' : '26px','padding-top':currentGroup.name ? '2px' : '4px',}">
-            <span ng-bind="user.name" class="pull-left" style="clear: right;" slot="label">{{ $t('Your Name') }}</span><br>
-            <span ng-if="currentGroup.name" ng-bind="currentGroup.name" class="pull-left" slot="label">{{ $t('Your Group') }} </span><br ng-if="currentGroup.name">
-            <span ng-bind="user.email" class="pull-left"slot="label">{{ $t('Your Email') }}</span>
-            <!-- <div class="clearfix">
-            </div> -->
-        </div>
-       </div>
+      <div class=" pull-left pull-div ng-binding ">
+            <span ng-bind="user.name" class="font-left" style="clear: right;" slot="label">{{ $t('u0032132') }}</span><br>
+            <span ng-if="currentGroup.name" ng-bind="currentGroup.name" class="font-left" slot="label">{{ $t('BBF-46') }} </span><br ng-if="currentGroup.name">
+            <span ng-bind="user.email" class="font-left" slot="label">{{ $t('Dongyou.Zhai@bmw-brilliance.cn') }}</span>
+      </div>
+    <group>
+     <tab>
+         <tab-item v-for="n in list2" :key="n.n" :selected="n.id==='admin'" >{{ n.id }}</tab-item>
+     </tab>    
+     </group>
     </group>   
     <group>
       <div class="ng-binding" >
@@ -29,16 +29,63 @@
       </div>
     </group>
   </div>
+
 </template>
 
 <script>
 import { Tabbar, TabbarItem, Group, Cell } from 'vux'
+// import { Tab, TabItem, FormPreview, XButton, Alert } from 'vux'
+const list = () => []
 export default {
   components: {
     Tabbar,
     TabbarItem,
     Group,
     Cell
+  },
+  data () {
+    return {
+      list2: list()
+    }
+  },
+  created () {
+    // 初始化标签
+    this.$http.get('/api/dashboard/user/info', {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'accept': 'application/json',
+        'accessKey': 'u21A14T9EXdGUVRS',
+        'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
+      }
+    }).then(({data}) => {
+      if (data.success === true) {
+        this.list2 = data.data
+        console.log(data.data.id.email)
+        console.log(this.list2)
+      } else {
+        this.showPlugin()
+        setTimeout(() => {
+          this.$vux.alert.hide()
+        }, 3000)
+      }
+    })
+    // 初始化产品列表
+    this.$http.get('/api/vm-service/dashboard/user/info', {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'accept': 'application/json',
+        'accessKey': 'u21A14T9EXdGUVRS',
+        'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
+      }
+    }).then(({data}) => {
+      console.log('products:', data)
+    })
+  },
+  methods: {
+    onItemClick (index) {
+    },
+    submit () {
+    }
   }
 }
 </script>
@@ -52,12 +99,6 @@ Overview Of Resource:
   zh-CN: 资源概况
 About:
   zh-CN: 关于
-Your Name:
-  zh-CN: 你的名字
-Your Group:
-  zh-CN: 你的组织
-Your Email:
-  zh-CN: 你的邮箱
 </i18n>
 
 <style>
@@ -97,18 +138,23 @@ Your Email:
   text-align: left;
 }
 .pull-img {
-    margin-left: 15px;
-    margin-top: 8px
+    margin-left: 20px;
+    margin-top: 14px;
+    margin-bottom: 12px;  
 }
 .pull-left {
   float: left;
 }
 .pull-div {
-    margin-left: 15px;
-    padding-top: 2px !important;
+    margin-top: 15px;
+    padding-top: 15px !important;
 }
-.pull-left { 
-  float: left; 
+.font-left{
+    width: 5%;
+    /* padding-top: -10px; */
+    margin: 40px 0 0 10px;
+
+    width: 300px;
 }
 .fa-desktop:before {
   content: "\f108";
