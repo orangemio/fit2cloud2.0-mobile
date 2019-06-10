@@ -2,7 +2,6 @@
   <div>
 
     <div class="repeat">
-
       <group>
         <cell :title="$t('申请虚拟机')" value="已审批" >
           <span class="demo-icon" slot="icon">&#xe623;&nbsp;&nbsp;</span>
@@ -29,8 +28,7 @@
 
 <script>
   import {FormPreview, Icon, Group, Cell, Grid, GridItem, XInput, Flexbox, FlexboxItem, CellFormPreview, XButton, Divider} from 'vux'
-  import http from '@/utils/httpAxios.js'
-  import apiSetting from '@/utils/apiSetting.js'
+  import axios from 'axios'
 
   export default {
     components: {
@@ -76,9 +74,7 @@
     },
     created () {
       // 初始化标签
-      http(apiSetting.vm_service.getOrderList, {}).then(({data}) => {
-        console.log(data)
-      })
+
     }
   }
 </script>
