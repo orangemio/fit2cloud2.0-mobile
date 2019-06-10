@@ -142,6 +142,15 @@
 </script>
 <style>
 
+  button.weui-btn, input.weui-btn{
+    font-size: 14px !important;
+    color: #0D6FD1 !important;
+  }
+
+  .vux-label{
+    font-size: 15px;
+  }
+
   .weui-form-preview__bd{
     color: black !important;
   }
