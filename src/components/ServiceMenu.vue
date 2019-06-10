@@ -1,5 +1,16 @@
 <template>
-  <div>
+  <div class="container" >
+
+    <div class="widget">
+      <div class="widget-head">
+        <div class="text-center">
+          服务目录
+        </div>
+        <div class="widget-icons pull-right content-title-btn orderContentFont-rewrite">
+          <search-op is-close="true" which="'search'"></search-op>
+        </div>
+      </div>
+    </div>
 
     <div class="widget">
       <div class="widget-head">
@@ -23,10 +34,10 @@
       </group>
       <flexbox>
         <flexbox-item>
-          <x-button>查看订单</x-button>
+          <x-button style="color: #5cb85c;">查看订单</x-button>
         </flexbox-item>
-        <flexbox-item>
-          <x-button>查看资源日志</x-button>
+        <flexbox-item style="margin-left: 0px;">
+          <x-button style="color: #5cb85c;">查看资源日志</x-button>
         </flexbox-item>
       </flexbox>
     </div>
@@ -144,12 +155,34 @@
 </script>
 <style>
 
+  button.weui-btn, input.weui-btn{
+    font-size: 14px !important;
+    color: #0D6FD1 !important;
+  }
+
+  .vux-label{
+    font-size: 15px;
+  }
+
+  .weui-form-preview__bd{
+    color: black !important;
+  }
+
+  .weui-form-preview__label{
+    color: black !important;
+  }
+
+  .weui-cell__ft{
+    color: black !important;
+  }
+
   /*!* Widget *!*/
   .widget {
     position: relative;
     border: 1px solid #DFDFDF;
     border-radius: 2px;
     margin-bottom: 10px;
+>>>>>>> dev_cxq
   }
 
   .widget .widget-head {
@@ -168,4 +201,23 @@
     margin-block: 10px;
   }
 
+  .widget .widget-head .widget-icons i {
+    font-size: 14px;
+    margin: 0 4px;
+  }
+
+  .widget .widget-head .widget-icons a {
+    color: #aaa;
+  }
+
+  .widget .widget-head .widget-icons a:hover {
+    color: #999;
+  }
+
+  .pull-right { float: right; }
+
+  .content-title-btn{
+    margin-top: -26px;
+    position: relative;
+  }
 </style>
