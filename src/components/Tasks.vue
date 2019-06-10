@@ -5,7 +5,7 @@
         <button-tab-item @on-item-click="changetask()" selected>{{ $t('待审批') }}</button-tab-item>
         <button-tab-item @on-item-click="changetask()">{{ $t('已审批') }}</button-tab-item>
       </button-tab>
-      <div v-if="taskstats">
+      <div v-if="taskstats" >
         <br>
         <form-preview   :body-items="list" :footer-buttons="buttons"></form-preview>
       </div>
@@ -61,10 +61,8 @@ export default {
     }, {}).then((res) => {
       console.log(res)
       if (res.data.success === true) {
-        this.tagList = res.data.data
-        console.log('tagList:', res.data.data)
-        // 调动标签过滤方法，默认调用第一个标签过滤
-        this.selectSingleTag(this.tagList[0].tagKey)
+        this.taskList = res.data.data
+        console.log('taskList:', res.data.data)
       }
     })
   },

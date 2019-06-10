@@ -3,8 +3,8 @@ import axios from 'axios'
 import CryptoJS from 'crypto-js'
 import uuid from 'uuid/v1'
 
-const SecretKey = 'I9P3PEMaiq2zm2Wu'
-const AccessKey = 'u21A14T9EXdGUVRS'
+const SecretKey = 'u82P9DsxIwxOG8ZC'
+const AccessKey = '7fGeaovhswFRcWfc'
 
 // 请求时的拦截器
 axios.interceptors.request.use(config => {
