@@ -11,6 +11,10 @@ const serviceModule = {
     getServer: {
       url: '/api/vm-service/server/*',
       method: 'get'
+    },
+    getOrderList: {
+      url: '/api/vm-service/order/list/1/10',
+      method: 'post'
     }
   },
   dashboard: {
