@@ -73,7 +73,7 @@ function successState (res) {
 const httpServer = (opts, data) => {
     // 公共参数
   let Public = {
-    'testParam': ''
+
   }
     // http默认配置
   let httpDefaultOpts = {
