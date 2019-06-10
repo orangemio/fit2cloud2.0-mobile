@@ -10,10 +10,10 @@
       </group>
       <flexbox>
         <flexbox-item>
-          <x-button type="primary" plain>查看订单</x-button>
+          <x-button>查看订单</x-button>
         </flexbox-item>
         <flexbox-item>
-          <x-button type="primary" plain>查看资源日志</x-button>
+          <x-button>查看资源日志</x-button>
         </flexbox-item>
       </flexbox>
     </div>
@@ -129,6 +129,8 @@
     }
   }
 </script>
-<style>
+<style lang="less">
+
+
 
 </style>
