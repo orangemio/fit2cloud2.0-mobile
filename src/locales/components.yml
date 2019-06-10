@@ -19,6 +19,7 @@ en:
   Aws: Aws
   platform: platform
   申请虚拟机: Application for Virtual Machine
+  ServiceMenu: ServiceMenu
 zh-CN:
   Tasks: 待办事项
   Services: 服务目录
@@ -40,3 +41,4 @@ zh-CN:
   Aws: Aws
   platform: 平台
   申请虚拟机: 申请虚拟机
+  ServiceMenu: 服务目录
