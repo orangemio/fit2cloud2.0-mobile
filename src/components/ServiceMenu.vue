@@ -30,6 +30,7 @@
 <script>
   import {FormPreview, Icon, Group, Cell, Grid, GridItem, XInput, Flexbox, FlexboxItem, CellFormPreview, XButton, Divider} from 'vux'
   import http from '@/utils/httpAxios.js'
+  import apiSetting from '@/utils/apiSetting.js'
 
   export default {
     components: {
@@ -75,29 +76,7 @@
     },
     created () {
       // 初始化标签
-      http.post('/api/vm-service/order/list/1/10', {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'accept': 'application/json',
-          'accessKey': 'vRA5tbcd0dNr8QAw',
-          'signature': this.COMMON.gethashkey('FDZNb7CMx0mj4Ma8', 'vRA5tbcd0dNr8QAw')
-        },
-        // URL参数
-        // 必须是一个纯对象或者 URL参数对象
-        params: {
-          applyUser: null,
-          cloudServerName: null,
-          createTimeEnd: null,
-          createTimeStart: null,
-          description: null,
-          id: null,
-          organizationId: null,
-          processId: null,
-          status: null,
-          type: null,
-          workspaceId: null
-        }
-      }).then(({data}) => {
+      http.post(apiSetting.vm_service.getOrderList, {}).then(({data}) => {
         console.log(data)
       })
     }
