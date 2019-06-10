@@ -12,23 +12,26 @@
       </div>
     </div>
 
-    <div class="widget">
-      <div class="widget-head">
-        <div class="text-center orderContentFont-rewrite">
-          {{'index_footer_service' | translate}}</div>
-        <div class="widget-icons pull-right content-title-btn orderContentFont-rewrite">
-          <search-op is-close="true" which="'search'"></search-op>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-    </div>
-
-
-
     <div class="repeat" v-for="order in orderList">
       <group>
-        <cell :title="$t('申请虚拟机')" :value=order[2].status >
+        <cell :title="$t('申请虚拟机')"  >
           <span class="demo-icon" slot="icon">&#xe623;&nbsp;&nbsp;</span>
+          <!--<span style="background-color: #d9534f;color: white;">{{order[2].status}}</span>-->
+          <span v-if="order[2].status==='已完成'">
+              <x-button mini type="primary"> {{order[2].status}}</x-button>
+          </span>
+          <span v-if="order[2].status==='异常'">
+              <x-button mini type="warn"> {{order[2].status}}</x-button>
+          </span>
+          <span v-if="order[2].status==='已拒绝'">
+              <x-button mini type="warn"> {{order[2].status}}</x-button>
+          </span>
+          <span v-if="order[2].status==='审批中'">
+              <x-button mini type="warn"> {{order[2].status}}</x-button>
+          </span>
+          <span v-if="order[2].status==='已审批'">
+              <x-button mini type="warn"> {{order[2].status}}</x-button>
+          </span>
         </cell>
         <cell-form-preview :list="order"></cell-form-preview>
       </group>
@@ -157,7 +160,7 @@
 
   button.weui-btn, input.weui-btn{
     font-size: 14px !important;
-    color: #0D6FD1 !important;
+    /*color: #0D6FD1 !important;*/
   }
 
   .vux-label{
@@ -182,7 +185,6 @@
     border: 1px solid #DFDFDF;
     border-radius: 2px;
     margin-bottom: 10px;
->>>>>>> dev_cxq
   }
 
   .widget .widget-head {
