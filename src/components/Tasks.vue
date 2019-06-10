@@ -30,7 +30,7 @@
 <script>
 import { FormPreview, ButtonTab, ButtonTabItem } from 'vux'
 import http from '@/utils/httpAxios.js'
-import apiSetting from '@/utils/apiSetting.js'
+// import apiSetting from '@/utils/apiSetting.js'
 export default {
   data () {
     return {
@@ -55,7 +55,10 @@ export default {
     }
   },
   mounted () {
-    http(apiSetting.flow.getEndTask, {}).then((res) => {
+    http({
+      url: '/api/dashboard/flow/runtime/task/end/1/10',
+      method: 'post'
+    }, {}).then((res) => {
       console.log(res)
       if (res.data.success === true) {
         this.tagList = res.data.data

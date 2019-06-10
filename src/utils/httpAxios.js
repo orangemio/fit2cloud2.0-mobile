@@ -1,5 +1,5 @@
 import axios from 'axios'
-import qs from 'qs'
+// import qs from 'qs'
 import CryptoJS from 'crypto-js'
 import uuid from 'uuid/v1'
 
@@ -88,7 +88,7 @@ const httpServer = (opts, data) => {
         // get 请求时带的参数
         // 这里的 data 为什么需要用qs.stringify(data)包一下,
         // 数据处理, 主要是配合下面headers里的Content-Type, 转成表单提交, 让后端可以直接用 $_POST 拿到数据
-    data: qs.stringify(Object.assign(Public, data)),
+    data: Object.assign(Public, data),
         // post 请求的数据
         // 请求头信息
     headers: opts.method === 'get' ? {
