@@ -9,7 +9,7 @@ const serviceModule = {
       method: 'get'
     },
     getOrderList: {
-      url: '/api/vm-service/order/list/1/10',
+      url: '/api/vm-service/order/list/1/4',
       method: 'post'
     }
   },
