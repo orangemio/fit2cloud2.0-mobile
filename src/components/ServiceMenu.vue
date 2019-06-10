@@ -10,10 +10,10 @@
       </group>
       <flexbox>
         <flexbox-item>
-          <x-button>查看订单</x-button>
+          <x-button style="color: #5cb85c;">查看订单</x-button>
         </flexbox-item>
-        <flexbox-item>
-          <x-button>查看资源日志</x-button>
+        <flexbox-item style="margin-left: 0px;">
+          <x-button style="color: #5cb85c;">查看资源日志</x-button>
         </flexbox-item>
       </flexbox>
     </div>
@@ -129,8 +129,11 @@
     }
   }
 </script>
-<style lang="less">
+<style>
 
+  /*.weui-btn_default{*/
+    /*color: red; !important;*/
+  /*}*/
 
 
 </style>
