@@ -94,7 +94,6 @@ export default {
             var formatdate = new Date(this.unfinishTaskList[i].taskStartTime)
             detail[1].value = formatdate.toLocaleString()
             this.unfinishlists.push(detail)
-            console.log(this.unfinishlists)
           }
         }
       })

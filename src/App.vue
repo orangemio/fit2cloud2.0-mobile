@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true" >Acloud</x-header>
+  <view-box ref="viewBox" body-padding-top="46px" body-padding-bottom="55px">
+    <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true" style="width:100%;position:fixed;left:0;top:0;z-index:100;" >Acloud</x-header>
     <router-view></router-view>
     <div v-transfer-dom>
       <actionsheet :menus="menus" v-model="showMenus" @on-click-menu="changeLocale"></actionsheet>
@@ -23,6 +24,7 @@
         <span slot="label">{{ $t('me') }}</span>
       </tabbar-item>
     </tabbar>
+    </view-box>
   </div>
 </template>
 <i18n>
@@ -37,7 +39,7 @@ me:
 </i18n>
 
 <script>
-import { Tabbar, TabbarItem, XHeader, Actionsheet, TransferDom, ButtonTab, ButtonTabItem } from 'vux'
+import { Tabbar, TabbarItem, XHeader, Actionsheet, TransferDom, ButtonTab, ButtonTabItem, ViewBox } from 'vux'
 
 export default {
   directives: {
@@ -49,6 +51,7 @@ export default {
     XHeader,
     Actionsheet,
     ButtonTab,
+    ViewBox,
     ButtonTabItem
   },
   methods: {
@@ -96,7 +99,6 @@ export default {
 
 body {
   height:100%;
-  padding-bottom:60px;
   background-color: #fbf9fe;
   font-family :'BMW Group Condensed'
 }
