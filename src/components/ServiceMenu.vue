@@ -1,5 +1,16 @@
 <template>
-  <div>
+  <div class="container" >
+
+    <div class="widget">
+      <div class="widget-head">
+        <div class="text-center">
+          服务目录
+        </div>
+        <div class="widget-icons pull-right content-title-btn orderContentFont-rewrite">
+          <search-op is-close="true" which="'search'"></search-op>
+        </div>
+      </div>
+    </div>
 
     <div class="repeat" v-for="order in orderList">
       <group>
@@ -131,9 +142,59 @@
 </script>
 <style>
 
-  /*.weui-btn_default{*/
-    /*color: red; !important;*/
-  /*}*/
+  .weui-form-preview__bd{
+    color: black !important;
+  }
 
+  .weui-form-preview__label{
+    color: black !important;
+  }
 
+  .weui-cell__ft{
+    color: black !important;
+  }
+
+  /*!* Widget *!*/
+  .widget {
+    position: relative;
+    border: 1px solid #DFDFDF;
+    border-radius: 2px;
+    margin-bottom: 10px;
+  }
+
+  .widget .widget-head {
+    position: relative;
+    color: #2B415C;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    background-color: #FCFCFC;
+    border-bottom: 1px solid #E7E7E7;
+  }
+
+  .text-center {
+    text-align: center;
+    /* margin: 0px; */
+    margin-block: 10px;
+  }
+
+  .widget .widget-head .widget-icons i {
+    font-size: 14px;
+    margin: 0 4px;
+  }
+
+  .widget .widget-head .widget-icons a {
+    color: #aaa;
+  }
+
+  .widget .widget-head .widget-icons a:hover {
+    color: #999;
+  }
+
+  .pull-right { float: right; }
+
+  .content-title-btn{
+    margin-top: -26px;
+    position: relative;
+  }
 </style>
