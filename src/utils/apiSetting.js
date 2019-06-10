@@ -7,6 +7,10 @@ const serviceModule = {
     getCatalogProduct: {
       url: '/api/vm-service/catalog-product/list',
       method: 'get'
+    },
+    getServer: {
+      url: '/api/vm-service/server/*',
+      method: 'get'
     }
   },
   dashboard: {

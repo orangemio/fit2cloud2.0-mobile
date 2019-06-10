@@ -18,6 +18,48 @@
             </div>
             </div>
         </div>
+        <!-- CPU -->
+        <div class="row">
+            <div style="margin: 5px 0">
+            <div class="echart-panel-title" ng-if="setting.name">
+                CPU
+            </div>
+            <div class="echart-panel-content">
+                <div class="pie-chart-custom" style="-webkit-tap-highlight-color: transparent; user-select: none;">
+                    <div style="position: relative; overflow: hidden; width: 357px; height: 180px; cursor: default;">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Memory -->
+        <div class="row">
+            <div style="margin: 5px 0">
+            <div class="echart-panel-title" ng-if="setting.name">
+                Memory
+            </div>
+            <div class="echart-panel-content">
+                <div class="pie-chart-custom" style="-webkit-tap-highlight-color: transparent; user-select: none;">
+                    <div style="position: relative; overflow: hidden; width: 357px; height: 180px; cursor: default;">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Disk -->
+        <div class="row">
+            <div style="margin: 5px 0">
+            <div class="echart-panel-title" ng-if="setting.name">
+                Disk
+            </div>
+            <div class="echart-panel-content">
+                <div class="pie-chart-custom" style="-webkit-tap-highlight-color: transparent; user-select: none;">
+                    <div style="position: relative; overflow: hidden; width: 357px; height: 180px; cursor: default;">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
