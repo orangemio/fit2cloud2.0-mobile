@@ -7,6 +7,10 @@ const serviceModule = {
     getCatalogProduct: {
       url: '/api/vm-service/catalog-product/list',
       method: 'get'
+    },
+    getOrderList: {
+      url: '/api/vm-service/order/list/1/10',
+      method: 'post'
     }
   }
 }

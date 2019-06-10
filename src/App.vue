@@ -28,7 +28,7 @@
 <i18n>
 Tasks:
   zh-CN: 待办事项
-Services:
+ServiceMenu:
   zh-CN: 服务目录
 Apply:
   zh-CN: 申请资源

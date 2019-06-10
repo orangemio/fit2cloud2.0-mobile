@@ -29,6 +29,7 @@
 
 <script>
   import {FormPreview, Icon, Group, Cell, Grid, GridItem, XInput, Flexbox, FlexboxItem, CellFormPreview, XButton, Divider} from 'vux'
+  import http from '@/utils/httpAxios.js'
 
   export default {
     components: {
@@ -74,12 +75,12 @@
     },
     created () {
       // 初始化标签
-      this.$http.post('/api/vm-service/order/list/1/10', {
+      http.post('/api/vm-service/order/list/1/10', {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
           'accept': 'application/json',
-          'accessKey': 'SwsP3P2hTM3L0wmR',
-          'signature': this.COMMON.gethashkey('1SOqvay6T55u6mFN', 'SwsP3P2hTM3L0wmR')
+          'accessKey': 'vRA5tbcd0dNr8QAw',
+          'signature': this.COMMON.gethashkey('FDZNb7CMx0mj4Ma8', 'vRA5tbcd0dNr8QAw')
         },
         // URL参数
         // 必须是一个纯对象或者 URL参数对象
