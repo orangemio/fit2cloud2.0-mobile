@@ -12,6 +12,12 @@ const serviceModule = {
       url: '/api/vm-service/order/list/1/10',
       method: 'post'
     }
+  },
+  flow: {
+    getEndTask: {
+      url: '/api/flow/runtime/task/end/1/10',
+      method: 'post'
+    }
   }
 }
 const apiSetting = {...serviceModule}
