@@ -76,7 +76,7 @@
     },
     created () {
       // 初始化标签
-      http.post(apiSetting.vm_service.getOrderList, {}).then(({data}) => {
+      http(apiSetting.vm_service.getOrderList, {}).then(({data}) => {
         console.log(data)
       })
     }
