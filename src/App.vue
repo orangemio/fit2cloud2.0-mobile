@@ -5,7 +5,7 @@
     <div v-transfer-dom>
       <actionsheet :menus="menus" v-model="showMenus" @on-click-menu="changeLocale"></actionsheet>
     </div>
-        <tabbar>
+    <tabbar>
       <tabbar-item selected link="/Tasks">
         <img slot="icon" src="./assets/images/icon_nav_article.png">
         <span slot="label">{{ $t('Tasks') }}</span>
@@ -95,8 +95,13 @@ export default {
 }
 
 body {
+  height:100%;
+  padding-bottom:60px;
   background-color: #fbf9fe;
   font-family :'BMW Group Condensed'
+}
+.weui-tabbar{
+  position: fixed !important;
 }
 .menu-title {
   color: #888;

@@ -3,7 +3,7 @@
 
     <div class="repeat" v-for="order in orderList">
       <group>
-        <cell :title="$t('申请虚拟机')" value="已审批">
+        <cell :title="$t('申请虚拟机')" :value=order[2].status >
           <span class="demo-icon" slot="icon">&#xe623;&nbsp;&nbsp;</span>
         </cell>
         <cell-form-preview :list="order"></cell-form-preview>
@@ -93,12 +93,35 @@
     methods: {
       selectPage (orderList) {
         orderList.forEach(function (order) {
+          switch (order.status) {
+            case 'FINISHED' : order.status = '已完成'
+              break
+            case 'ERROR' : order.status = '异常'
+              break
+            case 'REJECTED' : order.status = '已拒绝'
+              break
+            case 'UNCHECKED' : order.status = '审批中'
+              break
+            case 'APPROVED' : order.status = '已审批'
+              break
+            case 'TERMINATED' : order.status = '已终止'
+              break
+            case 'CANCELED' : order.status = '已取消'
+              break
+            case 'PROCESSING' : order.status = '正在处理'
+              break
+            case 'WARNING' : order.status = '警告'
+              break
+          }
+
           let orderJson = [{
             'label': '<span class="demo-icon" slot="icon">&#xe7a4;&nbsp;&nbsp;</span>申请时间',
-            'value': moment(order.createTime).format('YYYY-MM-DD HH:mm:sss')
+            'value': moment(order.createTime).format('YYYY-MM-DD HH:mm:ss')
           }, {
             'label': '<span class="demo-icon" slot="icon">&#xe613;&nbsp;&nbsp;</span>申请人',
             'value': order.applyUser
+          }, {
+            'status': order.status
           }]
           _orderList.push(orderJson)
         })
