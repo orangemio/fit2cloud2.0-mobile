@@ -19,6 +19,19 @@
       </group>
     </div>
 </template>
+
+<i18n>
+User: 
+  zh-CN: 用户
+Display Name:
+  zh-CN:  显示名
+Email:
+  zh-CN: 邮箱
+Workspace Name:
+  zh-CN: 工作空间
+
+</i18n>
+
 <script>
 import { Tabbar, TabbarItem, Group, Cell } from 'vux'
 import apiSetting from '@/utils/apiSetting.js'

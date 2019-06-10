@@ -5,8 +5,9 @@
             Overview Of Resource
         </div>
      </group> 
+     <div class="widget-content">
         <div class="row">
-            <div style="margin: 5px 0">
+            <div class="col-xs-12" style="margin: 5px 0">
             <div class="echart-panel-title" ng-if="setting.name">
                 VM
             </div>
@@ -60,6 +61,7 @@
             </div>
             </div>
         </div>
+    </div>
     </div>
 </template>
 <script>
@@ -130,6 +132,11 @@ export default {
 }
 .text-center {
     text-align: center;
+}
+.widget .widget-content {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 100%;
 }
 </style>
 

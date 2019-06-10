@@ -28,6 +28,10 @@ en:
   Aws: Aws
   platform: platform
   申请虚拟机: Application for Virtual Machine
+  User: User
+  Display Name: Display Name
+  Email: Email
+  Workspace Name: Workspace Name
 zh-CN:
   Tasks: 待办事项
   Services: 服务目录
@@ -58,3 +62,7 @@ zh-CN:
   Aws: Aws
   platform: 平台
   申请虚拟机: 申请虚拟机
+  User: 用户
+  Display Name: 显示名
+  Email: 邮箱
+  Workspace Name: 工作空间
