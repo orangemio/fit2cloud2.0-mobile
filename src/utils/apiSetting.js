@@ -1,6 +1,6 @@
 const serviceModule = {
   vm_service: {
-    getProductList: {
+    getProductTagList: {
       url: '/api/vm-service/tag/product/list',
       method: 'get'
     },
@@ -17,6 +17,12 @@ const serviceModule = {
     getEndTask: {
       url: '/api/flow/runtime/task/end/1/10',
       method: 'post'
+    }
+  },
+  dashboard: {
+    getUserInfo: {
+      url: '/api/dashboard/user/info',
+      method: 'get'
     }
   }
 }

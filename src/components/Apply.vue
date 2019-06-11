@@ -67,31 +67,8 @@ export default {
   },
   // 初始化方法，刚进页面调用
   created () {
-    // 马日天的实现方式
     // 初始化所有标签
-    // this.$http.get('/api/vm-service/tag/product/list', {
-    //   headers: {
-    //     'Content-Type': 'application/x-www-form-urlencoded',
-    //     'accept': 'application/json',
-    //     'accessKey': '7fGeaovhswFRcWfc',
-    //     'signature': this.COMMON.gethashkey('u82P9DsxIwxOG8ZC', '7fGeaovhswFRcWfc')
-    //   }
-    // }).then(({data}) => {
-    //   if (data.success === true) {
-    //     this.tagList = data.data
-    //     console.log('tagList:', data.data)
-    //     // 调动标签过滤方法，默认调用第一个标签过滤
-    //     this.selectSingleTag(this.tagList[0].tagKey)
-    //   } else {
-    // 默认方式有错误
-    //     this.showPlugin()
-    //     setTimeout(() => {
-    //       this.$vux.alert.hide()
-    //     }, 3000)
-    //   }
-    // })
-    // 马彦祖的实现方式
-    http(apiSetting.vm_service.getProductList).then((res) => {
+    http(apiSetting.vm_service.getProductTagList).then((res) => {
       if (res.data.success === true) {
         this.tagList = res.data.data
         console.log('tagList:', res.data.data)
@@ -114,31 +91,12 @@ export default {
       // 调动标签过滤方法，默认调用第一个标签过滤
       this.selectSingleTag(tagKey)
     },
+    // 申请按钮点击事件
     submit () {
+      alert('apply')
     },
     // 查询产品列表，默认查询所有产品
     queryProducts: async function () {
-      // 马日天的实现方式
-      // this.$http.get('/api/vm-service/catalog-product/list', {
-      //   headers: {
-      //     'Content-Type': 'application/x-www-form-urlencoded',
-      //     'accept': 'application/json',
-      //     'accessKey': 'u21A14T9EXdGUVRS',
-      //     'signature': this.COMMON.gethashkey('I9P3PEMaiq2zm2Wu', 'u21A14T9EXdGUVRS')
-      //   }
-      // }).then(({data}) => {
-      //   this.allProducts = data.data
-      //   this.productList = []
-      //   console.log('allProducts:', data.data)
-      // })
-
-      // 马彦祖的实现方式版本一
-      // const res = await http.get(api.vm_service.catalog_product.list, {})
-      // console.log(api.vm_service.catalog_product.list)
-      // this.allProducts = res.data.data
-      // this.productList = []
-      // console.log('allProducts:', res.data)
-      // 马彦祖的实现方式版本二
       http(apiSetting.vm_service.getCatalogProduct).then((res) => {
         this.allProducts = res.data.data
         this.productList = []
