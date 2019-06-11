@@ -19,14 +19,11 @@ en:
   Aws: Aws
   platform: platform
   申请虚拟机: Application for Virtual Machine
-<<<<<<< HEAD
   User: User
   Display Name: Display Name
   Email: Email
   Workspace Name: Workspace Name
-=======
   ServiceMenu: ServiceMenu
->>>>>>> dev
 zh-CN:
   Tasks: 待办事项
   Services: 服务目录
