@@ -3,13 +3,20 @@
 
     <div class="widget">
       <div class="widget-head">
-        <div class="text-center">
-          服务目录
-        </div>
         <div class="widget-icons pull-right content-title-btn orderContentFont-rewrite">
-          <search-op is-close="true" which="'search'"></search-op>
+
         </div>
       </div>
+
+      <div id="search" class="widget-content">
+          <form class="form-horizontal">
+              <group :title="$t('订单状态')">
+                <selector :options="orderStatusList" v-model="value">
+                </selector>
+              </group>
+          </form>
+      </div>
+
     </div>
 
     <div class="repeat" v-for="order in orderList">
@@ -50,7 +57,9 @@
 
 <i18n>
   申请虚拟机:
-  en: Application for Virtual Machine
+en : Apply VM
+  订单状态:
+en : Order Status
 </i18n>
 
 <script>
@@ -66,7 +75,8 @@
     FlexboxItem,
     CellFormPreview,
     XButton,
-    Divider
+    Divider,
+    Selector
   } from 'vux'
   import http from '@/utils/httpAxios.js'
   import apiSetting from '@/utils/apiSetting.js'
@@ -87,10 +97,20 @@
       Flexbox,
       FlexboxItem,
       Grid,
-      GridItem
+      GridItem,
+      Selector
     },
     data () {
       return {
+        orderStatusList: [{key: 'UNCHECKED', value: 'Processing'},
+                          {key: 'APPROVED', value: 'Approved'},
+                          {key: 'TERMINATED', value: 'Terminated'},
+                          {key: 'CANCELED', value: 'Canceled'},
+                          {key: 'REJECTED', value: 'Rejected'},
+                          {key: 'PROCESSING', value: 'Processing'},
+                          {key: 'FINISHED', value: 'Finished'},
+                          {key: 'WARNING', value: 'Warning'},
+                          {key: 'ERROR', value: 'Error'}],
         orderList: _orderList,
         button: [{
           style: 'primary',
@@ -157,6 +177,12 @@
   }
 </script>
 <style>
+
+  .widget .widget-content {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 100%;
+  }
 
   button.weui-btn, input.weui-btn{
     font-size: 14px !important;
