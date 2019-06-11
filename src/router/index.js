@@ -6,9 +6,9 @@ import Tasks from '@/components/Tasks/Tasks'
 import Apply from '@/components/Apply/Apply'
 import me from '@/components/Me/me'
 import ServiceMenu from '@/components/Services/ServiceMenu'
-import about from '@/components/about'
-import overview from '@/components/overview'
-import InstanceList from '@/components/InstanceList'
+import about from '@/components/Me/about'
+import overview from '@/components/Me/overview'
+import InstanceList from '@/components/Me/InstanceList'
 
 Vue.use(Router)
 
