@@ -19,14 +19,23 @@ Vue.prototype.COMMON = global
 Vue.use(Vuex)
 const store = new Vuex.Store()
 Vue.use(LocalePlugin)
+store.registerModule('user_data', {
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment (state) {
+      state.count++
+    }
+  }
+})
 Vue.use(vuexI18n.plugin, store, {
   moduleName: 'i18n'
   // 找不到翻译文件回调
   // onTranslationNotFound (locale, key) {
   //   console.warn(`i18n :: Key '${key}' not found for locale '${locale}'`)
   // }
-}
-)
+})
 const finalLocales = {
   'en': objectAssign(vuxLocales['en'], componentsLocales['en']),
   'zh-CN': objectAssign(vuxLocales['zh-CN'], componentsLocales['zh-CN'])
