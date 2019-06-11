@@ -13,7 +13,7 @@
             </cell>
             <cell  :title="$t('Email')"> <span class="ng-binding"> {{this.Email}} </span>
             </cell>
-            <cell  :title="$t('Workspace Name')"> <span class="ng-binding"> None </span>
+            <cell  :title="$t('Workspace Name')"> <span class="ng-binding"> {{this.Title}} </span>
              </cell>
         </div>
       </group>
@@ -60,6 +60,7 @@ export default {
         this.User = res.data.data.id
         this.DisplayName = res.data.data.name
         this.Email = res.data.data.email
+        this.Title = res.data.data.deptShortName
         // this.WorkspaceName = res.data.data.
       }
     })
