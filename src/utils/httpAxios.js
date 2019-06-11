@@ -3,8 +3,8 @@ import axios from 'axios'
 import CryptoJS from 'crypto-js'
 import uuid from 'uuid/v1'
 
-const SecretKey = 'u82P9DsxIwxOG8ZC'
-const AccessKey = '7fGeaovhswFRcWfc'
+const AccessKey = '5UW81LMQO1teVJqT'
+const SecretKey = 'Dw8nFWPYD7IkmDN7'
 
 // 请求时的拦截器
 axios.interceptors.request.use(config => {
@@ -47,7 +47,7 @@ function errorState (response) {
   }
 }
 
-function gethashkey (SecretKey, AccessKey) {
+function gethashkey (AccessKey, SecretKey) {
   var randomuuid = uuid()
   var src = AccessKey + '|' + randomuuid + '|' + Date.parse(new Date())
   var SecretKeySpec = CryptoJS.AES.encrypt(src, CryptoJS.enc.Utf8.parse(SecretKey),
@@ -96,12 +96,12 @@ const httpServer = (opts, data) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json; charset=UTF-8',
       'accessKey': AccessKey,
-      'signature': gethashkey(SecretKey, AccessKey)
+      'signature': gethashkey(AccessKey, SecretKey)
     } : {
       'X-Requested-With': 'XMLHttpRequest',
       'Content-Type': 'application/json',
       'accessKey': AccessKey,
-      'signature': gethashkey(SecretKey, AccessKey)
+      'signature': gethashkey(AccessKey, SecretKey)
     }
   }
 

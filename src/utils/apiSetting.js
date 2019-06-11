@@ -1,6 +1,6 @@
 const serviceModule = {
   vm_service: {
-    getProductList: {
+    getProductTagList: {
       url: '/api/vm-service/tag/product/list',
       method: 'get'
     },

@@ -6,7 +6,7 @@
     // const SecretKey = 'u82P9DsxIwxOG8ZC'
     // const AccessKey = '7fGeaovhswFRcWfc'
 
-    function gethashkey (SecretKey, AccessKey) {
+    function gethashkey (AccessKey, SecretKey) {
       var randomuuid = uuid()
       var src = AccessKey + '|' + randomuuid + '|' + Date.parse(new Date())
       var SecretKeySpec = CryptoJS.AES.encrypt(src, CryptoJS.enc.Utf8.parse(SecretKey),
