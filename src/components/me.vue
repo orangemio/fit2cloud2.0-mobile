@@ -4,7 +4,7 @@
       <img src="src/assets/demo/user.svg" class="pull-left pull-img" width="60" height="60">
       <div class=" pull-left pull-div ng-binding ">
             <span class="font-left" style="clear: right;" slot="label">{{this.Name}}</span><br>
-            <span class="font-left" slot="label">{{ $t('BBF-46') }} </span><br ng-if="currentGroup.name">
+            <span class="font-left" slot="label">{{ this.Title }} </span><br ng-if="currentGroup.name">
             <span class="font-left" slot="label">{{this.Email}}</span>
       </div>
     <group>
@@ -59,7 +59,7 @@ export default {
         console.log('tagList:', res.data.data)
         // 调动标签过滤方法，默认调用第一个标签过滤
         this.Name = res.data.data.id
-        this.Title = res.data.data.Name
+        this.Title = res.data.data.deptShortName
         this.Email = res.data.data.email
       }
     })
