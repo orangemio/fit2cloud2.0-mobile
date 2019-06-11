@@ -45,11 +45,9 @@ zh-CN:
   Aws: Aws
   platform: 平台
   申请虚拟机: 申请虚拟机
-<<<<<<< HEAD
   User: 用户
   Display Name: 显示名
   Email: 邮箱
   Workspace Name: 工作空间
-=======
   ServiceMenu: 服务目录
->>>>>>> dev
+
