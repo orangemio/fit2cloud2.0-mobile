@@ -8,7 +8,7 @@
        <div class="fa-border">
          <img class="col-3" width="80px" height="80px" :src= product.iconUrl >
          <div class="col-7">
-           <img class="col-2-img" src="web-public/fit2cloud/static/icon/vmware.ico">
+           <img class="col-2-img" :src= product.pluginIcon >
            <h4 class="col-h4" title="Windows Server 2016">{{ product.name }}</h4>
            <div class="col-div" title="product.description">
              {{ product.description }}
@@ -41,13 +41,14 @@ Apply:
 </i18n>
 
 <script>
-import { Tab, TabItem, FormPreview, XButton, Alert } from 'vux'
+import { Tab, TabItem, FormPreview, XButton, Alert, AlertModule } from 'vux'
 import http from '@/utils/httpAxios.js'
 import apiSetting from '@/utils/apiSetting.js'
+
 const tagList = () => []
-let productList = []
 const allProducts = () => []
 const tags = () => []
+let productList = []
 
 export default {
   components: {
@@ -55,7 +56,8 @@ export default {
     TabItem,
     FormPreview,
     XButton,
-    Alert
+    Alert,
+    AlertModule
   },
   data () {
     return {
@@ -75,10 +77,9 @@ export default {
         // 调动标签过滤方法，默认调用第一个标签过滤
         this.selectSingleTag(this.tagList[0].tagKey)
       } else {
-        // 默认方式有错误
-        this.showPlugin()
+        this.showModule(res.data.success, res.data.message)
         setTimeout(() => {
-          this.$vux.alert.hide()
+          AlertModule.hide()
         }, 3000)
       }
     })
@@ -91,9 +92,23 @@ export default {
       // 调动标签过滤方法，默认调用第一个标签过滤
       this.selectSingleTag(tagKey)
     },
+    // alert 弹框
+    showModule (title, content) {
+      AlertModule.show({
+        title: title,
+        content: content,
+        onShow () {
+        },
+        onHide () {
+        }
+      })
+    },
     // 申请按钮点击事件
     submit () {
-      alert('apply')
+      this.showModule('error', 'http client is timeout')
+      setTimeout(() => {
+        AlertModule.hide()
+      }, 3000)
     },
     // 查询产品列表，默认查询所有产品
     queryProducts: async function () {
