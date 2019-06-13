@@ -24,6 +24,8 @@ en:
   Email: Email
   Workspace Name: Workspace Name
   ServiceMenu: ServiceMenu
+  Login: Login
+  Help: Help
 zh-CN:
   Tasks: 待办事项
   Services: 服务目录
@@ -50,3 +52,5 @@ zh-CN:
   Email: 邮箱
   Workspace Name: 工作空间
   ServiceMenu: 服务目录
+  Login: 登录
+  Help: 帮助

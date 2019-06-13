@@ -8,6 +8,7 @@ import ServiceMenu from '@/components/Services/ServiceMenu'
 import about from '@/components/Me/about'
 import overview from '@/components/Me/overview'
 import InstanceList from '@/components/Me/InstanceList'
+import login from '@/components/Login/login'
 
 Vue.use(Router)
 
@@ -16,7 +17,7 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: Tasks
+      component: login
     },
     {
       path: '/Tasks',
