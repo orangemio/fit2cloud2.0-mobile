@@ -4,7 +4,7 @@ import Router from 'vue-router'
 import Tasks from '@/components/Tasks/Tasks'
 import Apply from '@/components/Apply/Apply'
 import me from '@/components/Me/me'
-import ServiceMenu from '@/components/Services/ServiceMenu'
+import Service from '@/components/Services/Service'
 import about from '@/components/Me/about'
 import overview from '@/components/Me/overview'
 import InstanceList from '@/components/Me/InstanceList'
@@ -24,9 +24,9 @@ export default new Router({
       component: Tasks
     },
     {
-      path: '/ServiceMenu',
-      name: 'ServiceMenu',
-      component: ServiceMenu
+      path: '/Service',
+      name: 'Service',
+      component: Service
     },
     {
       path: '/Apply',

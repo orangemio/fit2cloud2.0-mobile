@@ -1,23 +1,22 @@
 <template>
-  <div class="container" >
+  <div>
 
-    <div class="widget">
-      <div class="widget-head">
-        <div class="widget-icons pull-right content-title-btn orderContentFont-rewrite">
+    <!--<div class="widget">-->
+      <!--<div class="widget-head">-->
+        <!--<div class="widget-icons pull-right content-title-btn orderContentFont-rewrite">-->
 
-        </div>
-      </div>
+        <!--</div>-->
+      <!--</div>-->
 
-      <div id="search" class="widget-content">
-          <form class="form-horizontal">
-              <group :title="$t('订单状态')">
-                <selector :options="orderStatusList" v-model="value">
-                </selector>
-              </group>
-          </form>
-      </div>
-
-    </div>
+      <!--<div id="search" class="widget-content">-->
+          <!--<form class="form-horizontal">-->
+              <!--<group :title="$t('订单状态')">-->
+                <!--<selector :options="orderStatusList" v-model="value">-->
+                <!--</selector>-->
+              <!--</group>-->
+          <!--</form>-->
+      <!--</div>-->
+    <!--</div>-->
 
     <div class="repeat" v-for="order in orderList">
       <group>
@@ -44,10 +43,10 @@
       </group>
       <flexbox>
         <flexbox-item>
-          <x-button style="color: #5cb85c;">查看订单</x-button>
+          <x-button style="background-color: #ffffff;border-radius:0px;">查看订单</x-button>
         </flexbox-item>
         <flexbox-item style="margin-left: 0px;">
-          <x-button style="color: #5cb85c;">查看资源日志</x-button>
+          <x-button style="background-color: #ffffff;border-radius:0px;">查看资源日志</x-button>
         </flexbox-item>
       </flexbox>
     </div>
@@ -177,6 +176,16 @@ en : Order Status
   }
 </script>
 <style>
+
+
+  .repeat {
+    margin-top: -10px;
+  }
+
+  .btn_sevice{
+    border-radius: 0px !important;
+    background-color: #ffffff !important;
+  }
 
   .widget .widget-content {
     position: relative;

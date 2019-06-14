@@ -11,9 +11,9 @@
         <img slot="icon" src="./assets/images/icon_nav_article.png">
         <span slot="label">{{ $t('Tasks') }}</span>
       </tabbar-item>
-      <tabbar-item link="/ServiceMenu">
+      <tabbar-item link="/Service">
         <img slot="icon" src="./assets/images/icon_nav_cell.png">
-        <span slot="label">{{ $t('ServiceMenu') }}</span>
+        <span slot="label">{{ $t('Service') }}</span>
       </tabbar-item>
       <tabbar-item link="/Apply">
         <img slot="icon" src="./assets/images/icon_nav_msg.png">
@@ -30,7 +30,7 @@
 <i18n>
 Tasks:
   zh-CN: 待办事项
-ServiceMenu:
+Service:
   zh-CN: 服务目录
 Apply:
   zh-CN: 申请资源

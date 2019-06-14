@@ -23,11 +23,11 @@ en:
   Display Name: Display Name
   Email: Email
   Workspace Name: Workspace Name
-  ServiceMenu: ServiceMenu
+  Service: Service
 zh-CN:
   Tasks: 待办事项
   Services: 服务目录
-  Apply: 申请
+  Apply: 申请资源
   me: 我
   About me: 关于
   Instance List: 虚拟机列表
@@ -49,4 +49,4 @@ zh-CN:
   Display Name: 显示名
   Email: 邮箱
   Workspace Name: 工作空间
-  ServiceMenu: 服务目录
+  Service: 服务目录
