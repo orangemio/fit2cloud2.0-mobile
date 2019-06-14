@@ -116,8 +116,8 @@ export default {
 }
 </script>
 
-<style>
-    .weui-form-preview__hd{
+<style scoped>
+  .vux-form-preview /deep/ .weui-form-preview__hd {
       display:none !important;
     }
 </style>
