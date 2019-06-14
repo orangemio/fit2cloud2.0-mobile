@@ -116,8 +116,8 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style>
     .weui-form-preview__hd{
-      display:none;
+      display:none !important;
     }
 </style>

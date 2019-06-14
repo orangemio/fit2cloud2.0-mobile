@@ -24,10 +24,18 @@ en:
   Email: Email
   Workspace Name: Workspace Name
   ServiceMenu: ServiceMenu
+  Login: Login
+  Help: Help
+  Username: Username
+  Password: Password
+  Error: Error
+  Please Check Username and Password: Please Check Username and Password
+  Can\'t get AccessKey: Can\'t get AccessKey
+  Can not get AccessKey: Can not get AccessKey
 zh-CN:
   Tasks: 待办事项
   Services: 服务目录
-  Apply: 申请
+  Apply: 申请资源
   me: 我
   About me: 关于
   Instance List: 虚拟机列表
@@ -50,3 +58,11 @@ zh-CN:
   Email: 邮箱
   Workspace Name: 工作空间
   ServiceMenu: 服务目录
+  Login: 登录
+  Help: 帮助
+  Username: 用户名
+  Password: 密码
+  Error: 错误
+  Please Check Username and Password: 请检查用户名和密码
+  Can\'t get AccessKey: 获取不到访问密钥
+  Can not get AccessKey: 获取不到访问密钥
