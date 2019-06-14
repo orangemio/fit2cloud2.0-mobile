@@ -38,6 +38,7 @@ Can not get AccessKey:
 <script>
 import { XButton, Box, XInput, Group, AlertModule } from 'vux'
 import http from '@/utils/httpAxios.js'
+import keyStore from '@/utils/keyStore.js'
 // import apiSetting from '@/utils/apiSetting.js'
 
 export default {
@@ -67,7 +68,8 @@ export default {
           method: 'get'
         }, {}).then((res) => {
           if (res.data.success === true) {
-            console.log(res)
+            keyStore(res.data.data.accessKey, res.data.data.secretKey)
+            this.$router.push({name: 'Tasks'})
           } else {
             AlertModule.show({
               title: this.$t('Error'),
