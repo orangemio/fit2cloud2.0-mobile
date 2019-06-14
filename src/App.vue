@@ -1,7 +1,7 @@
 <template>
   <div id="app">
   <view-box ref="viewBox" body-padding-top="46px" body-padding-bottom="55px">
-    <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true" style="width:100%;position:fixed;left:0;top:0;z-index:100;" >Acloud</x-header>
+    <x-header :right-options="{showMore: true}" @on-click-more="showMenus = true" style="width:100%;position:fixed;left:0;top:0;z-index:100;" >aCloud</x-header>
     <router-view></router-view>
     <div v-transfer-dom>
       <actionsheet :menus="menus" v-model="showMenus" @on-click-menu="changeLocale"></actionsheet>

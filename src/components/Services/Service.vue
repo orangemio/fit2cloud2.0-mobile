@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="background">
 
     <!--<div class="widget">-->
       <!--<div class="widget-head">-->
@@ -43,10 +43,10 @@
       </group>
       <flexbox>
         <flexbox-item>
-          <x-button style="background-color: #ffffff;border-radius:0px;">查看订单</x-button>
+          <x-button class="btn_sevice">查看订单</x-button>
         </flexbox-item>
         <flexbox-item style="margin-left: 0px;">
-          <x-button style="background-color: #ffffff;border-radius:0px;">查看资源日志</x-button>
+          <x-button class="btn_sevice">查看资源日志</x-button>
         </flexbox-item>
       </flexbox>
     </div>
@@ -177,6 +177,9 @@ en : Order Status
 </script>
 <style>
 
+  .background{
+    background-color: #fbf9f3;
+  }
 
   .repeat {
     margin-top: -10px;
