@@ -33,15 +33,19 @@ Workspace Name:
 </i18n>
 
 <script>
-import { Tabbar, TabbarItem, Group, Cell } from 'vux'
+import { Tabbar, TabbarItem, Group, Cell,Alert, AlertModule  } from 'vux'
 import apiSetting from '@/utils/apiSetting.js'
 import http from '@/utils/httpAxios.js'
+// import { Tab, TabItem, FormPreview, XButton, Alert } from 'vux'
+// const list = () => []
 export default {
   components: {
     Tabbar,
     TabbarItem,
     Group,
-    Cell
+    Cell,
+    AlertModule,
+    Alert
   },
   data () {
     return {

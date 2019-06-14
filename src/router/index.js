@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // 引用自定义组件
-import Home from '@/components/HelloFromVux'
 import Tasks from '@/components/Tasks/Tasks'
 import Apply from '@/components/Apply/Apply'
 import me from '@/components/Me/me'
@@ -17,7 +16,7 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: Home
+      component: Tasks
     },
     {
       path: '/Tasks',
