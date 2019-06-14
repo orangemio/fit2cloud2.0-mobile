@@ -77,7 +77,7 @@ export default {
         // 调动标签过滤方法，默认调用第一个标签过滤
         this.selectSingleTag(this.tagList[0].tagKey)
       } else {
-        this.showModule(res.data.success, res.data.message)
+        this.showModule('Error', res.data.message)
         setTimeout(() => {
           AlertModule.hide()
         }, 3000)
@@ -113,8 +113,15 @@ export default {
     // 查询产品列表，默认查询所有产品
     queryProducts: async function () {
       http(apiSetting.vm_service.getCatalogProduct).then((res) => {
-        this.allProducts = res.data.data
-        this.productList = []
+        if (res.data.success === true) {
+          this.allProducts = res.data.data
+          this.productList = []
+        } else {
+          this.showModule('Error', res.data.message)
+          setTimeout(() => {
+            AlertModule.hide()
+          }, 3000)
+        }
       })
     },
     // 按标签过滤产品，默认显示第一个标签下的产品并且标签属于选中状态
