@@ -26,6 +26,12 @@ en:
   ServiceMenu: ServiceMenu
   Login: Login
   Help: Help
+  Username: Username
+  Password: Password
+  Error: Error
+  Please Check Username and Password: Please Check Username and Password
+  Can\'t get AccessKey: Can\'t get AccessKey
+  Can not get AccessKey: Can not get AccessKey
 zh-CN:
   Tasks: 待办事项
   Services: 服务目录
@@ -54,3 +60,9 @@ zh-CN:
   ServiceMenu: 服务目录
   Login: 登录
   Help: 帮助
+  Username: 用户名
+  Password: 密码
+  Error: 错误
+  Please Check Username and Password: 请检查用户名和密码
+  Can\'t get AccessKey: 获取不到访问密钥
+  Can not get AccessKey: 获取不到访问密钥

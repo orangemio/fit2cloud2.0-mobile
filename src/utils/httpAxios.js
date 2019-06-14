@@ -2,9 +2,7 @@ import axios from 'axios'
 // import qs from 'qs'
 import CryptoJS from 'crypto-js'
 import uuid from 'uuid/v1'
-
-const AccessKey = '5UW81LMQO1teVJqT'
-const SecretKey = 'Dw8nFWPYD7IkmDN7'
+import keyStore from './keyStore'
 
 // 请求时的拦截器
 axios.interceptors.request.use(config => {
@@ -71,6 +69,8 @@ function successState (res) {
 }
 
 const httpServer = (opts, data) => {
+  var AccessKey = keyStore().AccessKey
+  var SecretKey = keyStore().SecretKey
     // 公共参数
   let Public = {
 
