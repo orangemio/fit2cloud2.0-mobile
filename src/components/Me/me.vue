@@ -4,7 +4,7 @@
       <img src="src/assets/demo/user.svg" class="pull-left pull-img" width="60" height="60">
       <div class=" pull-left pull-div ng-binding ">
             <span class="font-left" style="clear: right;" slot="label">{{this.Name}}</span><br>
-            <span class="font-left" slot="label">{{ this.Title }} </span><br ng-if="currentGroup.name">
+            <!-- <span class="font-left" slot="label">{{ this.Title }} </span><br ng-if="currentGroup.name"> -->
             <span class="font-left" slot="label">{{ this.userName }} </span><br ng-if="currentGroup.name">
             <span class="font-left" slot="label">{{this.Email}}</span>
       </div>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { Tabbar, TabbarItem, Group, Cell } from 'vux'
+import { Tabbar, TabbarItem, Group, Cell, Alert, AlertModule } from 'vux'
 import apiSetting from '@/utils/apiSetting.js'
 import http from '@/utils/httpAxios.js'
 // import { Tab, TabItem, FormPreview, XButton, Alert } from 'vux'
@@ -44,7 +44,9 @@ export default {
     Tabbar,
     TabbarItem,
     Group,
-    Cell
+    Cell,
+    AlertModule,
+    Alert
   },
   data () {
     return {

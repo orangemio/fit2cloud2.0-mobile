@@ -6,7 +6,7 @@
     <div v-transfer-dom>
       <actionsheet :menus="menus" v-model="showMenus" @on-click-menu="changeLocale"></actionsheet>
     </div>
-    <tabbar>
+    <tabbar v-if="this.$route.path!='/'">
       <tabbar-item selected link="/Tasks">
         <img slot="icon" src="./assets/images/icon_nav_article.png">
         <span slot="label">{{ $t('Tasks') }}</span>
