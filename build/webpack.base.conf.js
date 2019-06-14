@@ -96,7 +96,7 @@ module.exports = vuxLoader.merge(webpackConfig, {
       options: {
         cssProcessorOptions : {
           safe: true,
-          zindex: false,
+          zindex: true,
           autoprefixer: {
             add: true,
             browsers: [

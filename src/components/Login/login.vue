@@ -57,12 +57,7 @@ export default {
   },
   methods: {
     login () {
-      if (this.username === '' && this.password === '') {
-        AlertModule.show({
-          title: this.$t('Error'),
-          content: this.$t('Please Check Username and Password')
-        })
-      } else {
+      if (!!this.username && !!this.password) {
         http({
           url: '/api/management-center/user/key/getKey/' + this.username,
           method: 'get'
@@ -76,6 +71,11 @@ export default {
               content: this.$t('Can not get AccessKey')
             })
           }
+        })
+      } else {
+        AlertModule.show({
+          title: this.$t('Error'),
+          content: this.$t('Please Check Username and Password')
         })
       }
     }
