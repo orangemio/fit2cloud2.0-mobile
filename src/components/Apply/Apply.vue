@@ -10,10 +10,10 @@
          <div class="col-7">
            <img class="col-2-img" :src= product.pluginIcon >
            <h4 class="col-h4" title="Windows Server 2016">{{ product.name }}</h4>
-           <div class="col-div" title="product.description">
+           <x-button mini plain class='col-btn' @click.native='submit()'>{{ $t('Apply') }}</x-button>
+           <span class="col-div" title="product.description">
              {{ product.description }}
-           </div>
-           <x-button mini plain class='col-btn' @click.native='submit()'>Apply</x-button>
+           </span>
          </div>
        </div>
      </div>
@@ -22,22 +22,8 @@
 
 
 <i18n>
-Tiexi:
-  zh-CN: 铁西
-Dadong:
-  zh-CN: 大东
-Beijing:
-  zh-CN: 北京
-Azure:
-  zh-CN: Azure
-Lab:
-  zh-CN: Lab
-Aws:
-  zh-CN: Aws
-platform:
-  zh-CN: 平台
-Apply:
-  zh-CN: 申请
+  Apply:
+    zh-CN: 申请
 </i18n>
 
 <script>
@@ -147,7 +133,7 @@ export default {
         // 将过滤后的产品列表赋值给全局参数，在页面上显示
         this.productList = productList
         console.log('this.productList', this.productList)
-      }, 500)
+      }, 700)
     }
   }
 }
@@ -212,7 +198,7 @@ export default {
 }
 .col-btn{
     float: right;
-    margin: 0 10px 10% 0;
+    margin: 10px 10px 0 0;
 }
 
 </style>
