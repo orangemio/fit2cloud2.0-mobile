@@ -24,31 +24,31 @@
           <span class="demo-icon" slot="icon">&#xe623;&nbsp;&nbsp;</span>
           <!--<span style="background-color: #d9534f;color: white;">{{order[2].status}}</span>-->
           <span v-if="order[2].status==='FINISHED'">
-              <x-button mini type="primary">{{$t('Finished')}}</x-button>
+              <x-button mini :gradients="['#74b566', '#74b566']">{{$t('Finished')}}</x-button>
           </span>
           <span v-if="order[2].status==='ERROR'">
-              <x-button mini type="warn"> {{$t('Error')}}</x-button>
+              <x-button mini :gradients="['#ca5c54', '#ca5c54']"> {{$t('Error')}}</x-button>
           </span>
           <span v-if="order[2].status==='REJECTED'">
-              <x-button mini type="warn"> {{$t('Rejected')}}</x-button>
+              <x-button mini :gradients="['#ca5c54', '#ca5c54']"> {{$t('Rejected')}}</x-button>
           </span>
           <span v-if="order[2].status==='UNCHECKED'">
-              <x-button mini type="warn"> {{$t('Unchecked')}}</x-button>
+              <x-button mini  :gradients="['#e7af5f', '#e7af5f']"> {{$t('Unchecked')}}</x-button>
           </span>
           <span v-if="order[2].status==='APPROVED'">
-              <x-button mini type="warn"> {{$t('Approved')}}</x-button>
+              <x-button mini :gradients="['#ffffff', '#ffffff']"> {{$t('Approved')}}</x-button>
           </span>
           <span v-if="order[2].status==='TERMINATED'">
-              <x-button mini type="warn"> {{$t('Terminated')}}</x-button>
+              <x-button mini :gradients="['#ffffff', '#ffffff']"> {{$t('Terminated')}}</x-button>
           </span>
           <span v-if="order[2].status==='CANCELED'">
-              <x-button mini type="warn"> {{$t('Canceled')}}</x-button>
+              <x-button mini :gradients="['#ffffff', '#ffffff']"> {{$t('Canceled')}}</x-button>
           </span>
           <span v-if="order[2].status==='PROCESSING'">
-              <x-button mini type="warn"> {{$t('Processing')}}</x-button>
+              <x-button mini :gradients="['#437ab2', '#437ab2']"> {{$t('Processing')}}</x-button>
           </span>
           <span v-if="order[2].status==='WARNING'">
-              <x-button mini type="warn"> {{$t('Warning')}}</x-button>
+              <x-button mini :gradients="['#e7af5f', '#e7af5f']"> {{$t('Warning')}}</x-button>
           </span>
         </cell>
         <!--<cell-form-preview :list="order">-->
