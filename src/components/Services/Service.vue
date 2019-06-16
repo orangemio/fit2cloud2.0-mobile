@@ -20,33 +20,61 @@
 
     <div class="repeat" v-for="order in orderList">
       <group>
-        <cell :title="$t('申请虚拟机')"  >
+        <cell :title="$t('View Order')"  >
           <span class="demo-icon" slot="icon">&#xe623;&nbsp;&nbsp;</span>
           <!--<span style="background-color: #d9534f;color: white;">{{order[2].status}}</span>-->
-          <span v-if="order[2].status==='已完成'">
-              <x-button mini type="primary"> {{order[2].status}}</x-button>
+          <span v-if="order[2].status==='FINISHED'">
+              <x-button mini type="primary">{{$t('Finished')}}</x-button>
           </span>
-          <span v-if="order[2].status==='异常'">
-              <x-button mini type="warn"> {{order[2].status}}</x-button>
+          <span v-if="order[2].status==='ERROR'">
+              <x-button mini type="warn"> {{$t('Error')}}</x-button>
           </span>
-          <span v-if="order[2].status==='已拒绝'">
-              <x-button mini type="warn"> {{order[2].status}}</x-button>
+          <span v-if="order[2].status==='REJECTED'">
+              <x-button mini type="warn"> {{$t('Rejected')}}</x-button>
           </span>
-          <span v-if="order[2].status==='审批中'">
-              <x-button mini type="warn"> {{order[2].status}}</x-button>
+          <span v-if="order[2].status==='UNCHECKED'">
+              <x-button mini type="warn"> {{$t('Unchecked')}}</x-button>
           </span>
-          <span v-if="order[2].status==='已审批'">
-              <x-button mini type="warn"> {{order[2].status}}</x-button>
+          <span v-if="order[2].status==='APPROVED'">
+              <x-button mini type="warn"> {{$t('Approved')}}</x-button>
+          </span>
+          <span v-if="order[2].status==='TERMINATED'">
+              <x-button mini type="warn"> {{$t('Terminated')}}</x-button>
+          </span>
+          <span v-if="order[2].status==='CANCELED'">
+              <x-button mini type="warn"> {{$t('Canceled')}}</x-button>
+          </span>
+          <span v-if="order[2].status==='PROCESSING'">
+              <x-button mini type="warn"> {{$t('Processing')}}</x-button>
+          </span>
+          <span v-if="order[2].status==='WARNING'">
+              <x-button mini type="warn"> {{$t('Warning')}}</x-button>
           </span>
         </cell>
-        <cell-form-preview :list="order"></cell-form-preview>
+        <!--<cell-form-preview :list="order">-->
+
+        <!--</cell-form-preview>-->
+        <cell :title="$t('Submit time')"  >
+          <span class="demo-icon" slot="icon">&#xe7a4;&nbsp;&nbsp;</span>
+          <span >
+            {{order[0].value}}
+          </span>
+        </cell>
+
+        <cell :title="$t('Applicant')"  >
+          <span class="demo-icon" slot="icon">&#xe613;&nbsp;&nbsp;</span>
+          <span >
+             {{order[1].value}}
+          </span>
+        </cell>
+
       </group>
       <flexbox>
         <flexbox-item>
-          <x-button class="btn_sevice">查看订单</x-button>
+          <x-button class="btn_sevice">{{$t('View Order')}}</x-button>
         </flexbox-item>
         <flexbox-item style="margin-left: 0px;">
-          <x-button class="btn_sevice">查看资源日志</x-button>
+          <x-button class="btn_sevice">{{$t('View Log')}}</x-button>
         </flexbox-item>
       </flexbox>
     </div>
@@ -55,10 +83,37 @@
 </template>
 
 <i18n>
-  申请虚拟机:
-en : Apply VM
-  订单状态:
-en : Order Status
+  View Order:
+    zh-CN : 查看订单
+  View Log:
+    zh-CN : 查看资源日志
+  Apply VM:
+    zh-CN : 申请虚拟机
+  Order Status:
+    zh-CN : 订单状态
+  Finished:
+    zh-CN : 已完成
+  Error  :
+    zh-CN : 异常
+  Rejected:
+    zh-CN : 已拒绝
+  Processing :
+    zh-CN : 正在处理
+  Approved:
+    zh-CN : 已审批
+  Terminated:
+    zh-CN : 已终止
+  Canceled:
+    zh-CN : 已取消
+  Warning:
+    zh-CN : 警告
+  Unchecked:
+    zh-CN : 审批中
+  Submit time:
+    zh-CN : 申请时间
+  Applicant:
+    zh-CN : 申请人
+
 </i18n>
 
 <script>
@@ -110,20 +165,7 @@ en : Order Status
                           {key: 'FINISHED', value: 'Finished'},
                           {key: 'WARNING', value: 'Warning'},
                           {key: 'ERROR', value: 'Error'}],
-        orderList: _orderList,
-        button: [{
-          style: 'primary',
-          text: this.$t('查看订单'),
-          onButtonClick: () => {
-            alert(`clicking 查看订单`)
-          }
-        }, {
-          style: 'primary',
-          text: this.$t('查看资源日志'),
-          onButtonClick: () => {
-
-          }
-        }]
+        orderList: _orderList
       }
     },
     created () {
@@ -139,32 +181,29 @@ en : Order Status
     methods: {
       selectPage (orderList) {
         orderList.forEach(function (order) {
-          switch (order.status) {
-            case 'FINISHED' : order.status = '已完成'
-              break
-            case 'ERROR' : order.status = '异常'
-              break
-            case 'REJECTED' : order.status = '已拒绝'
-              break
-            case 'UNCHECKED' : order.status = '审批中'
-              break
-            case 'APPROVED' : order.status = '已审批'
-              break
-            case 'TERMINATED' : order.status = '已终止'
-              break
-            case 'CANCELED' : order.status = '已取消'
-              break
-            case 'PROCESSING' : order.status = '正在处理'
-              break
-            case 'WARNING' : order.status = '警告'
-              break
-          }
-
+          // switch (order.status) {
+          //   case 'FINISHED' : order.status = '已完成'
+          //     break
+          //   case 'ERROR' : order.status = '异常'
+          //     break
+          //   case 'REJECTED' : order.status = '已拒绝'
+          //     break
+          //   case 'UNCHECKED' : order.status = '审批中'
+          //     break
+          //   case 'APPROVED' : order.status = '已审批'
+          //     break
+          //   case 'TERMINATED' : order.status = '已终止'
+          //     break
+          //   case 'CANCELED' : order.status = '已取消'
+          //     break
+          //   case 'PROCESSING' : order.status = '正在处理'
+          //     break
+          //   case 'WARNING' : order.status = '警告'
+          //     break
+          // }
           let orderJson = [{
-            'label': '<span class="demo-icon" slot="icon">&#xe7a4;&nbsp;&nbsp;</span>申请时间',
             'value': moment(order.createTime).format('YYYY-MM-DD HH:mm:ss')
           }, {
-            'label': '<span class="demo-icon" slot="icon">&#xe613;&nbsp;&nbsp;</span>申请人',
             'value': order.applyUser
           }, {
             'status': order.status
@@ -188,6 +227,9 @@ en : Order Status
   .btn_sevice{
     border-radius: 0px !important;
     background-color: #ffffff !important;
+    color: #0D6FD1 !important;
+    height: 45px;
+    font-size: 17px;
   }
 
   .widget .widget-content {
