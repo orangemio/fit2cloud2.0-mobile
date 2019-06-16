@@ -175,7 +175,7 @@ en : Order Status
     }
   }
 </script>
-<style>
+<style lang="less" scoped>
 
   .background{
     background-color: #fbf9f3;
