@@ -229,7 +229,7 @@
     background-color: #ffffff !important;
     color: #0D6FD1 !important;
     height: 45px;
-    font-size: 17px;
+    font-size: 17px !important;
   }
 
   .widget .widget-content {
@@ -239,8 +239,7 @@
   }
 
   button.weui-btn, input.weui-btn{
-    font-size: 14px !important;
-    /*color: #0D6FD1 !important;*/
+    /*font-size: 17px !important;*/
   }
 
   .vux-label{
