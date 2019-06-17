@@ -5,11 +5,11 @@
   "author": "OrangeM21 <orangemtony@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "cp src/utils/apiSetting.develop.js src/utils/apiSetting.js && webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
-    "build": "node build/build.js"
+    "build": "cp src/utils/apiSetting.production.js src/utils/apiSetting.js && node build/build.js"
   },
   "dependencies": {
     "axios": "^0.19.0",
